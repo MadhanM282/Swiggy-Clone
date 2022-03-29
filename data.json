@@ -10,7 +10,7 @@
         "top_pick":"true",
         "exclusive":"true",
         "newly_added":"true",
-        "geometry":{"type":"Point","coordinates":[77.621303,12.947904]},
+        "geometry":"Banglore",
         "categories":["Recommended","North Indian","South Indian","Indian Snacks"],
         "items":[
                     {
@@ -198,7 +198,7 @@
         "top_pick":"true",
         "exclusive":"true",
         "newly_added":"true",
-        "geometry":{"type":"Point","coordinates":[77.621807,12.947068]},
+        "geometry":"Delhi",
         "categories":["Recommended","Burgers","Pizzas","Sandwiches"],
         "items":[
             {
@@ -503,7 +503,7 @@
         "top_pick":"true",
         "exclusive":"true",
         "newly_added":"true",
-        "geometry":{"type":"Point","coordinates":[77.619640,12.947936]},
+        "geometry":"Patna",
         "categories":["Recommended","Burgers","Pizzas","Sandwiches"],
         "items":[
             {
