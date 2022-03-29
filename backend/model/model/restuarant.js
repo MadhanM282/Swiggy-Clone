@@ -61,14 +61,8 @@ const restaurantSchema = new Schema({
         type:Number,
         required:true
     },
-    average_cost:{
-        type:Number,
-        required:true
-    },
-    average_time:{
-        type:Number,
-        required:true
-    },
+   
+ 
     cuisines:{
         type:Array,
         required:true
@@ -79,22 +73,13 @@ const restaurantSchema = new Schema({
         type:String,
         required:true
     },
-    veg:{
-        type:Boolean,
-        required:true
-    },
-    top_pick:{
-        type:Boolean,
-        required:true
-    },
+   
+  
     exclusive:{
         type:Boolean,
         required:true
     },
-    newly_added:{
-        type:Boolean,
-        required:true
-    },
+ 
     categories:{
         type:Array,
         required:true
