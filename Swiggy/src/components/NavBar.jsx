@@ -15,7 +15,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import {SignInSide} from './login';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Location','Products',  'Cart'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export const ResponsiveAppBar = () => {
@@ -58,7 +58,7 @@ export const ResponsiveAppBar = () => {
 
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
-                        LOGO
+                        <img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px"/>
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -91,6 +91,7 @@ export const ResponsiveAppBar = () => {
                             }}
                         >
                             {pages.map((page) => (
+
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center">{page}</Typography>
                                 </MenuItem>
@@ -103,10 +104,11 @@ export const ResponsiveAppBar = () => {
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                     >
-                        LOGO
+                        <img src="http://www.pngimagesfree.com/LOGO/S/Swiggy/Swiggy-Logo-PNG.png" height="40px"/>
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
+                            <>
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}
@@ -114,7 +116,11 @@ export const ResponsiveAppBar = () => {
                             >
                                 {page}
                             </Button>
+                            
+                            </>
+                            
                         ))}
+                        
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
