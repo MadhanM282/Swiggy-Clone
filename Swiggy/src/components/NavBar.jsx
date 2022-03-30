@@ -51,7 +51,7 @@ export const ResponsiveAppBar = () => {
 
     return (
         <ThemeProvider theme={darkTheme}>
-            <AppBar position="static" color="primary" sx={{ boxShadow: 0 }}>
+            <AppBar position="static" color="primary" >
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Typography
