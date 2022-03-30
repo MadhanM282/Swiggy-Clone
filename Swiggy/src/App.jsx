@@ -1,7 +1,7 @@
 
 import { Route,  Routes } from 'react-router-dom'
 import './App.css'
-import { Cart } from './components/cartPage'
+import { Cart } from './components/CART/cartPage'
 import { Home } from './components/landingPAge'
 import { SignInSide } from './components/login'
 import { ResponsiveAppBar } from './components/NavBar'
