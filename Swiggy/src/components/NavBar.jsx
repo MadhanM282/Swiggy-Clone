@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link, useNavigate } from 'react-router-dom';
 import {SignInSide} from './login';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -36,15 +37,25 @@ export const ResponsiveAppBar = () => {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+    const darkTheme = createTheme({
+        palette: {
+          mode: "light",
+          primary: {
+            main: "#fff"
+          }
+        }
+      });
 
     return (
-        <AppBar position="static">
+    <ThemeProvider theme={darkTheme}>
+        <AppBar position="static" color="primary" sx={{ boxShadow: 0 }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
                         variant="h6"
                         noWrap
                         component="div"
+
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
                         LOGO
@@ -99,7 +110,7 @@ export const ResponsiveAppBar = () => {
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: 'black', display: 'block' }}
                             >
                                 {page}
                             </Button>
@@ -140,5 +151,7 @@ export const ResponsiveAppBar = () => {
                 </Toolbar>
             </Container>
         </AppBar>
+        </ThemeProvider>
     );
 };
+// import { ThemeProvider, createTheme } from "@mui/material/styles";
