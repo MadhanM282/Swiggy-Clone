@@ -1,11 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
-import MainFooter from "./footer/footer";
-import FooterPage from "./footer/bootfooter";
+import logo from './logo.svg';
+import './App.css';
+import Footer from './footer/footer';
 
 function App() {
-  return <FooterPage />;
-  
+  return (
+    <Footer/>
+  );
 }
 
 export default App;
