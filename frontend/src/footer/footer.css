@@ -1,0 +1,13 @@
+.container1{
+    display:flex;
+    border: 1px solid red !important;
+   
+}
+.head{
+    display:flex;
+}
+.address{
+
+font-family: ProximaNova,arial,"Hel";
+
+}
