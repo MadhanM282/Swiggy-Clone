@@ -7,6 +7,7 @@ import { SignInSide } from './components/login'
 import { ResponsiveAppBar } from './components/NavBar'
 // import { NavBar } from './components/NavBar'
 import { Restaurent } from './components/Restaurentpage'
+// import PrimarySearchAppBar from './components/search'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       {/* <NavBar/> */}
       <ResponsiveAppBar/>
+      {/* <PrimarySearchAppBar/> */}
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/cart" element={<Cart/>}/>
