@@ -37,8 +37,8 @@ export const ResponsiveAppBar = () => {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
-    const navigator = ()=>{
-        
+    const navigator = () => {
+
     }
     const darkTheme = createTheme({
         palette: {
@@ -93,12 +93,30 @@ export const ResponsiveAppBar = () => {
                                     display: { xs: 'block', md: 'none' },
                                 }}
                             >
-                                {pages.map((page) => (
-
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{page}</Typography>
-                                    </MenuItem>
-                                ))}
+                                <Button
+                                    key={"Location"}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: 'black', display: 'block' }}
+                                >
+                                    Location
+                                </Button>
+                                <Button
+                                    key={"Products"}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: 'black', display: 'block' }}
+                                >
+                                    Product
+                                </Button>
+                                <Button
+                                    key={"Cart"}
+                                    onClick={() => {
+                                        handleCloseNavMenu();
+                                        return navigate("/cart");
+                                    }}
+                                    sx={{ my: 2, color: 'black', display: 'block' }}
+                                >
+                                    Cart
+                                </Button>
                             </Menu>
 
                         </Box>
@@ -129,7 +147,7 @@ export const ResponsiveAppBar = () => {
                             </Button>
                             <Button
                                 key={"Cart"}
-                                onClick={()=>{
+                                onClick={() => {
                                     handleCloseNavMenu();
                                     return navigate("/cart");
                                 }}
