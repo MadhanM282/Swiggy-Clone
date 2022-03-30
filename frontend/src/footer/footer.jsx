@@ -79,12 +79,7 @@ function MainFooter() {
                                     <li style={{ marginTop: '28%' }}>
                                         <b className='text-muted'>LEGAL</b>
                                     </li>
-                                    <li>Terms & Conditions</li>
-                                    <li>Refund & Cancellation</li>
-                                    <li>Privacy Policy</li>
-                                    <li>Cookie Policy</li>
-                                    <li>Offer Terms</li>
-                                    <li>Phishing & Fraud</li>
+                                
                                 </ul>
                             </div>
                         </div>
