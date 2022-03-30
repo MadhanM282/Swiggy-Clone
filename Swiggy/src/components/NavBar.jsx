@@ -37,6 +37,9 @@ export const ResponsiveAppBar = () => {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+    const navigator = ()=>{
+        
+    }
     const darkTheme = createTheme({
         palette: {
             mode: "light",
@@ -97,7 +100,7 @@ export const ResponsiveAppBar = () => {
                                     </MenuItem>
                                 ))}
                             </Menu>
-                            
+
                         </Box>
                         <Typography
                             variant="h6"
@@ -108,19 +111,36 @@ export const ResponsiveAppBar = () => {
                             <img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                            {pages.map((page) => (
-
-                                <Button
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: 'black', display: 'block' }}
-                                >
-                                    {page}
-                                </Button>
 
 
+                            <Button
+                                key={"Location"}
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'black', display: 'block' }}
+                            >
+                                Location
+                            </Button>
+                            <Button
+                                key={"Products"}
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'black', display: 'block' }}
+                            >
+                                Product
+                            </Button>
+                            <Button
+                                key={"Cart"}
+                                onClick={()=>{
+                                    handleCloseNavMenu();
+                                    return navigate("/cart");
+                                }}
+                                sx={{ my: 2, color: 'black', display: 'block' }}
+                            >
+                                Cart
+                            </Button>
 
-                            ))}
+
+
+
 
                         </Box>
 
