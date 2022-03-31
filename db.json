@@ -1,122 +1,126 @@
 [
     {
-        "name": "Prem Di Hatti",
-        "rating": 4.1,
-        "average_cost": 300,
-        "average_time": 32,
+        "name": "KFC",
+        "rating": 3.3,
+        "average_cost": 400,
+        "average_time": 26,
         "cuisines": [
-            "North Indian",
-            "Street Food"
+            "American",
+            "Snacks",
+            "Biryani"
         ],
         "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/q2puzaq3gm0luzrure0x",
         "top_pick": "false",
         "exclusive": "false",
         "newly_added": "false",
-        "geometry": "Delhi"
+        "geometry": "Hyderabad"
     },
     {
-        "name": "Rama Chole Bhature",
-        "rating": 4.2,
-        "average_cost": 150,
-        "average_time": 32,
+        "name": "Eaters Stop - Hyderabad",
+        "rating": 3.9,
+        "average_cost": 350,
+        "average_time": 22,
         "cuisines": [
-            "Street Food",
-            "Pizzas"
+            "Biryani",
+            "Tandoor",
+            "Chinese",
+            "North Indian"
         ],
-        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_…to,q_auto,w_508,h_320,c_fill/tamyeyeu0qrdseaeyd7u",
+        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/sdwx3gedytwbsogf52su",
         "top_pick": "true",
         "exclusive": "true",
         "newly_added": "false",
-        "geometry": "Delhi"
+        "geometry": "Hyderabad"
     },
     {
-        "name": "Burger King",
-        "rating": 4.2,
-        "average_cost": 350,
-        "average_time": 38,
+        "name": "Suren Pastries",
+        "rating": 4.1,
+        "average_cost": 300,
+        "average_time": 28,
         "cuisines": [
-            "American",
-            "Fast Food"
+            "Bakery",
+            "Chinese",
+            "Italian",
+            "Indian"
         ],
         "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/xykhkk7viixsfnyej4ge",
         "top_pick": "false",
         "exclusive": "true",
         "newly_added": "true",
-        "geometry": "Delhi"
+        "geometry": "Hyderabad"
     },
     {
-        "name": "Soni Bakers",
-        "rating": 4.4,
-        "average_cost": 450,
-        "average_time": 35,
-        "cuisines": [
-            "Bakery",
-            "Snacks"
-        ],
-        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_…to,q_auto,w_508,h_320,c_fill/dyt6rbrzywqvo5rqylfh",
-        "top_pick": "false",
-        "exclusive": "false",
-        "newly_added": "true",
-        "geometry": "Delhi"
-    },
-    {
-        "name": "Hotel Saravana Bhavan",
-        "rating": 4.1,
-        "average_cost": 300,
-        "average_time": 36,
+        "name": "Uma Parlour - Pure Veg. ",
+        "rating": 4.2,
+        "average_cost": 200,
+        "average_time": 24,
         "cuisines": [
             "South Indian"
         ],
-        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_…to,q_auto,w_508,h_320,c_fill/alfstgzarsirkt2rlh4k",
+        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zskk21orirlgzrjddimy",
+        "top_pick": "false",
+        "exclusive": "false",
+        "newly_added": "true",
+        "geometry": "Hyderabad"
+    },
+    {
+        "name": "Burger King",
+        "rating": 4.3,
+        "average_cost": 350,
+        "average_time": 26,
+        "cuisines": [
+            "American",
+            "Fast Food"
+        ],
+        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/fllheib4reoinnhsk2sb",
         "top_pick": "true",
         "exclusive": "true",
         "newly_added": "true",
-        "geometry": "Delhi"
+        "geometry": "Hyderabad"
     },
     {
-        "name": "Grover Mithaivala",
-        "rating": 4.4,
-        "average_cost": 300,
-        "average_time": 41,
+        "name": "New Dhaba City Punjab",
+        "rating": 4.0,
+        "average_cost": 250,
+        "average_time": 21,
         "cuisines": [
-            "Sweets",
-            "North Indian"
-        ],
-        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_…to,q_auto,w_508,h_320,c_fill/qac6bow9os0twiuly1ce",
-        "top_pick": "false",
-        "exclusive": "false",
-        "newly_added": "false",
-        "geometry": "Delhi"
-    },
-    {
-        "name": "QD's Restaurant",
-        "rating": 4.1,
-        "average_cost": 500,
-        "average_time": 37,
-        "cuisines": [
-            "Indian",
+            "North Indian",
             "Chinese"
         ],
-        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_…to,q_auto,w_508,h_320,c_fill/lx1aynhai9ufjqwm3yby",
+        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/m8ocbi4m6mahaov3aega",
         "top_pick": "false",
         "exclusive": "false",
         "newly_added": "false",
-        "geometry": "Delhi"
+        "geometry": "Hyderabad"
     },
     {
-        "name": "Wow! Momo",
-        "rating": 4.0,
-        "average_cost": 400,
-        "average_time": 35,
+        "name": "Mandi Croods",
+        "rating": 3.7,
+        "average_cost": 300,
+        "average_time": 27,
         "cuisines": [
-            "Tibetan",
-            "Healthy Food"
+            "Arabian",
+            "Indian"
         ],
-        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_…to,q_auto,w_508,h_320,c_fill/xraubsidxprkejxg4jim",
+        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/zpvq3dxwsgglykhzggby",
+        "top_pick": "false",
+        "exclusive": "false",
+        "newly_added": "false",
+        "geometry": "Hyderabad"
+    },
+    {
+        "name": "Creme Shakes",
+        "rating": 4.2,
+        "average_cost": 200,
+        "average_time": 19,
+        "cuisines": [
+            "Beverages"
+        ],
+        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/gcqblgyq72dn8cqsqwlr",
         "top_pick": "true",
         "exclusive": "false",
         "newly_added": "false",
-        "geometry": "Delhi"
+        "geometry": "Hyderabad"
     },
     {
         "name": "Pizza Hut",
@@ -130,21 +134,22 @@
         "top_pick": "false",
         "exclusive": "true",
         "newly_added": "false",
-        "geometry": "Delhi"
+        "geometry": "Hyderabad"
     },
     {
-        "name": "Ramji Di Hatti",
+        "name": "Santrupthi",
         "rating": 4.0,
-        "average_cost": 200,
-        "average_time": 38,
+        "average_cost": 300,
+        "average_time": 20,
         "cuisines": [
-            "North Indian",
-            "Indian"
+            "Biryani",
+            "Indian",
+            "Chinese"
         ],
-        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_…to,q_auto,w_508,h_320,c_fill/xa2ipqn93tyqpvyjpvbb",
+        "img_url": "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/kkxw95zuo3rslqsdnsqn",
         "top_pick": "false",
         "exclusive": "true",
         "newly_added": "false",
-        "geometry": "Delhi"
+        "geometry": "Hyderabad"
     }
 ]
