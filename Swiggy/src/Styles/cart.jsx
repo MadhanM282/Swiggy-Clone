@@ -49,7 +49,7 @@ export const LogButton = styled.div`
     border: 1px solid #60b246;
     width: fit-content;
     height: fit-content;
-    line-height: 0px;
+    line-height: 2px;
     text-align: center;
     padding:0px 30px;
 `
@@ -58,7 +58,7 @@ export const SignBttn = styled.div`
     background: #60b246;
     width: fit-content;
     height: fit-content;
-    line-height: 0px;
+    line-height: 2px;
     text-align: center;
     margin-left: 30px;
     color: white;
@@ -74,6 +74,9 @@ export const Pic = styled.div`
     /* border: 1px solid red; */
 `
 export const Info = styled.div`
-    line-height:0px
+    line-height:19px;
 `
-/* export const */
+export const LogsDiv = styled.div`
+    width: 60%;
+    /* border: 1px solid red; */
+`
