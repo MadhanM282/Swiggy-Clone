@@ -59,7 +59,8 @@ export const LogButton = styled.div`
     height: fit-content;
     line-height: 2px;
     text-align: center;
-    padding:0px 30px;
+    padding:20px 30px 0px 30px;
+    cursor:pointer;
 `
 export const SignBttn = styled.div`
     border: 1px solid transparent;
@@ -69,13 +70,18 @@ export const SignBttn = styled.div`
     line-height: 2px;
     text-align: center;
     margin-left: 30px;
+    cursor: pointer;
     color: white;
-    padding:0px 30px;
+    padding:20px 30px 0px 30px;
+    &:hover{
+        background:#409925 ;
+    }
     
 `
 export const LogButtona = styled.div`
     display: flex;
     margin-top:50px;
+    /* border: 1px solid; */
 `
 export const Pic = styled.div`
     margin-left: 70px;
@@ -88,3 +94,5 @@ export const LogsDiv = styled.div`
     width: 60%;
     /* border: 1px solid red; */
 `
+
+// ---------------------- ADDRESS  ---------------------//
