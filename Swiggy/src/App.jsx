@@ -3,13 +3,14 @@ import { Route,  Routes } from 'react-router-dom'
 import './App.css'
 
 
-import { Navbar } from './components/Navbar/Navbar';
+// import { Navbar } from './components/Navbar/Navbar';
 import { Cart } from './components/CART/cartPage'
 import { Home } from './components/landingPAge'
 import { SignInSide } from './components/login'
 import { ResponsiveAppBar } from './components/NavBar'
 // import PrimarySearchAppBar from './components/search'
 import { Restaurent } from "./components/RestaurantPage/Restaurentpage";
+import { Landing } from './components/Landing/Landing';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
 
      
         
-      <Navbar/>
+      <ResponsiveAppBar/>
      
     
       <Routes>
@@ -25,6 +26,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/restaurent" element={<Restaurent />} />
         <Route path="/login" element={<SignInSide />} />
+        <Route path='/land' element={<Landing/>} />
 
       </Routes>
     </div>

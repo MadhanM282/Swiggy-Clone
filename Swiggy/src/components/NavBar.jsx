@@ -14,6 +14,11 @@ import MenuItem from '@mui/material/MenuItem';
 import { Link, useNavigate } from 'react-router-dom';
 import { SignInSide } from './login';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { AiOutlineSearch } from 'react-icons/ai';
+import { IoIosHelpBuoy } from 'react-icons/io';
+import { MdLocalOffer } from 'react-icons/md';
+import { FaRegUser } from "react-icons/fa";
+import { BsFillCartPlusFill } from "react-icons/bs";
 
 const pages = ['Location', 'Products', 'Cart'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -51,7 +56,7 @@ export const ResponsiveAppBar = () => {
 
     return (
         <ThemeProvider theme={darkTheme}>
-            <AppBar position="static" color="primary" >
+            <AppBar position="static" color="primary" sx={{height:"70px"}} >
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Typography
@@ -59,7 +64,7 @@ export const ResponsiveAppBar = () => {
                             noWrap
                             component="div"
 
-                            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+                            sx={{ mr: 1, display: { xs: 'none', md: 'flex' } }}
                         >
                             <img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
                         </Typography>
@@ -93,13 +98,14 @@ export const ResponsiveAppBar = () => {
                                     display: { xs: 'block', md: 'none' },
                                 }}
                             >
-                                <Button
+                                {/* <Button
                                     key={"Location"}
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'black', display: 'block' }}
                                 >
                                     Location
-                                </Button>
+                                </Button> */}
+
                                 <Button
                                     key={"Products"}
                                     onClick={handleCloseNavMenu}
@@ -117,6 +123,7 @@ export const ResponsiveAppBar = () => {
                                 >
                                     Cart
                                 </Button>
+
                             </Menu>
 
                         </Box>
@@ -124,38 +131,57 @@ export const ResponsiveAppBar = () => {
                             variant="h6"
                             noWrap
                             component="div"
-                            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+                            sx={{ flexGrow: 1,alignItems: 'center', display: { xs: 'flex', md: 'none' } }}
                         >
                             <img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
                         </Typography>
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        <Box sx={{ flexGrow: 1,alignItems: 'center', display: { xs: 'none', md: 'flex' } }}>
 
 
-                            <Button
-                                key={"Location"}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'black', display: 'block' }}
-                            >
-                                Location
-                            </Button>
-                            <Button
-                                key={"Products"}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'black', display: 'block' }}
-                            >
-                                Product
-                            </Button>
-                            <Button
-                                key={"Cart"}
-                                onClick={() => {
-                                    handleCloseNavMenu();
-                                    return navigate("/cart");
+                            <select style={{ width: "50%", height: "50px",mt:"20px"  }}>
+                                <option>Select your Location</option>
+                                <option value="">Indore</option>
+                                <option value="">Pune</option>
+                                <option value="">Hyderabad</option>
+                                <option value="">Delhi</option>
+                                <option value="">Banglore</option>
+                            </select>
+                            
+
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    p: 0,
+                                    m: 1,
+                                    width: "400px",
+                                    justifyContent: "flex-end",
+                                    bgcolor: 'background.paper',
+                                    borderRadius: 1,
+                                    
+                                    width:"70%",
+                                    height:"50px"
+
                                 }}
-                                sx={{ my: 2, color: 'black', display: 'block' }}
                             >
-                                Cart
-                            </Button>
+                                <Button sx={{ my: 0, color: 'black', display: 'block' }}><AiOutlineSearch />Search</Button>
+                                <Button onClick={() => handleCloseNavMenu()} sx={{ my: 0, color: 'black', display: 'block' }}><IoIosHelpBuoy />Help</Button>
+                                <Button
+                                    sx={{ my: 0,  color: 'black', display: 'block' }}
+                                    
+                                > <MdLocalOffer />Offers</Button>
 
+                                <Button
+                                    key={"Cart"}
+                                    onClick={() => {
+                                        handleCloseNavMenu();
+                                        return navigate("/cart");
+                                    }}
+                                    sx={{ my: 0, color: 'black', display: 'block' }}
+                                >
+                                    <BsFillCartPlusFill /> Cart
+                                </Button>
+                            </Box>
 
 
 
