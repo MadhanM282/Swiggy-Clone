@@ -10,6 +10,7 @@ import { FaRegUser } from "react-icons/fa";
 import { BsFillCartPlusFill } from "react-icons/bs";
 
 
+
 export const Navbar = () => {
   return (
 
