@@ -26,7 +26,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/restaurent" element={<Restaurent />} />
         <Route path="/login" element={<SignInSide />} />
-        <Route path='/land' element={<Landing/>} />
+        
 
       </Routes>
     </div>

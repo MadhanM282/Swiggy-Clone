@@ -150,7 +150,7 @@ export const Landing = () => {
         {loading ? (
           <>
             {rest.map((item) => (
-              <Link to={"/restaurent"}>
+              <Link to={"/restaurent"} key={item._id}>
                 <HotelMenu data={item} key={item._id} />
               </Link>
             ))}

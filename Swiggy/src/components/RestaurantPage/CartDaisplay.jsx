@@ -15,6 +15,7 @@ export default function CartDisplay() {
   const cart = useSelector((state) => {
     return state.cart;
   });
+  console.log(cart)
 
   return (
     <CartDisplayDiv>
