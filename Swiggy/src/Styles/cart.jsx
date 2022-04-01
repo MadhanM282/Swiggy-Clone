@@ -7,7 +7,7 @@ export const Main = styled.div`
 export const Main1 = styled.div`
     display: flex;
 `
-export const Seerestaurantsnearyou= styled.div`
+export const Seerestaurantsnearyou = styled.div`
     border: 1px solid red;
     margin: auto;
     width: fit-content;
@@ -16,13 +16,21 @@ export const Seerestaurantsnearyou= styled.div`
     color: white;
     font-weight: bolder;
     margin-top: 30px;
+    &:hover{
+     background:#e37214;
+     cursor: pointer;
+    }
 `
 
 export const Emptydiv = styled.div`
     width: fit-content;
     margin: auto;
     margin-top: 100px;
-    `
+    text-align: center;
+    
+    
+    /* border: 1px solid; */
+`
 export const Span = styled.span`
     height: 50px;
 
