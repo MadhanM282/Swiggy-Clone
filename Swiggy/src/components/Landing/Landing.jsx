@@ -47,19 +47,33 @@ box-shadow: 0 1px 4px 0 rgba(40, 44, 63, 0.4);
  export  const Landing = () =>{
 
     const [rest , setRest] = useState([])
+    const [filter, setFilter] = useState('')
 
   useEffect(() =>{
       getData()
   },[])
 
+  useEffect(() =>{
+     filterData()
+  },[])
+
 
     const getData = () =>{
+
         axios.get("https://swiggy-list.herokuapp.com/rest").then((res) =>{
         setRest(res.data)
         }).then(() =>{
             getData()
         })
     }
+
+    const filterData = (sort) =>{
+       axios.get(`https://swiggy-list.herokuapp.com/rest?lat=12.9259&lng=77.6229&filter=${filter}&sort=${sort}`).then((res) =>{
+           setRest(res.data)
+           console.log(res.data)
+       })
+    }
+
 
 
 
@@ -76,7 +90,7 @@ box-shadow: 0 1px 4px 0 rgba(40, 44, 63, 0.4);
                         <h3 className='text-left'>
                             <button
                                 className='btn btn-sm'
-                                // onClick={allData}
+                                onClick={getData()}
                             >
                                 <Equal
                                     src="../../../Icons/equal.svg"
@@ -90,19 +104,19 @@ box-shadow: 0 1px 4px 0 rgba(40, 44, 63, 0.4);
                     <ul className='list-inline'>
                         <button
                             className='list-inline-item btn'
-                            // onClick={() => filterData('average_time')}
+                            onClick={() => filterData('average_time')}
                         >
                             Relevance
                         </button>
                         <button
                             className='btn list-inline-item'
-                            // onClick={() => filterData('average_cost')}
+                            onClick={() => filterData('average_cost')}
                         >
                             Cost for Two
                         </button>
                         <button
                             className='list-inline-item btn'
-                            // onClick={() => filterData('rating')}
+                            onClick={() => filterData('rating')}
                         >
                             Rating
                         </button>
