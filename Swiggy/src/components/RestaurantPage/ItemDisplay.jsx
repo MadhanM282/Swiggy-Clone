@@ -1,20 +1,32 @@
 import React from "react";
-import { ItemDisplayDiv } from "../../Styles/RestaurantPage";
+import {
+  ItemDisplayDiv,
+  Row,
+  Column,
+  AddBtn,
+  ItemImg,
+  CustomP,
+  ItemDesc,
+} from "../../Styles/RestaurantPage";
 
 export default function ItemDisplay(Props) {
   return (
     <ItemDisplayDiv>
       {/* {Props.item.map((e) => {
         return ( */}
-      <div>
+      <h2>{Props.category}</h2>
+      <ItemDesc>
         <div>
           <h4>{Props.type}</h4>
           <h4>{Props.name}</h4>
           <p>{Props.price}</p>
         </div>
-        <img src={Props.image} alt="image" />
-        <button>Add</button>
-      </div>
+        <Column>
+          <ItemImg src={Props.image} alt="image" />
+          <AddBtn>Add</AddBtn>
+          <CustomP>Customisable</CustomP>
+        </Column>
+      </ItemDesc>
     </ItemDisplayDiv>
   );
 }
