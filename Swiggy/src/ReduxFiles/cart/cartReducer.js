@@ -13,7 +13,7 @@ const initial = {
 };
 export const CartReducer = (store = initial, { type, payload }) => {
     switch (type) {
-        case CART: return { ...store, cart: payload };
+        case CART: return { ...store, cart:[...store.cart,payload] };
         case LOG_STAT: return { login: true ,address:false,payment:false };
         case ADDRESS_STAT: return { address: true ,login:true,payment:false };
         case PAYMENT_STAT: return { payment: true };

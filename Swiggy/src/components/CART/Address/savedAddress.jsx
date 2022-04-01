@@ -9,7 +9,7 @@ export const SavedAddress = () => {
     return (
 
         <Box>
-            <h1> <Span1><img src="https://img.icons8.com/ios/344/ffffff/place-marker--v1.png" alt="" width="25px" /></Span1>Select delivery address <Span><img src="https://img.icons8.com/color/344/approval--v1.png" alt="success" width="30px" /></Span> </h1>
+            <h1> <Span1><img src="https://img.icons8.com/ios/344/ffffff/place-marker--v1.png" alt="" width="25px" /></Span1>Select delivery address </h1>
             <p>You have a saved address in this location</p>
             <Box sx={[{ p: 2, borderRadius: 1, width: "50%", typography: 'body2' }, () => ({ '&:hover': { boxShadow: 3 } })]}>
                 <p>
@@ -23,3 +23,5 @@ export const SavedAddress = () => {
         </Box>
     )       
 }
+
+{/* <Span><img src="https://img.icons8.com/color/344/approval--v1.png" alt="success" width="30px" /></Span> */}

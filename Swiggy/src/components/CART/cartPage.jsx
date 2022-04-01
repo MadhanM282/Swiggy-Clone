@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux"
 import { Log, LogsDiv, Main } from "../../Styles/cart";
 import { Address } from "./Address/Address";
+import { SuccessAddress } from "./Address/AddressSuccess";
 import { Empty } from "./Empty";
 import { Logged } from "./logstatcomponents/loggedin";
 import { Not_Logged } from "./logstatcomponents/notloggedin";
@@ -13,7 +14,7 @@ export const Cart = () => {
         <Main>
             <LogsDiv>
                 <Log>{login ? <Logged /> : <Not_Logged />} </Log>
-                <Address />
+                {address?<SuccessAddress/>:<Address />}
             </LogsDiv>
             <div>
                 list
