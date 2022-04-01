@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const Restaurent = () => {
+export const Restaurentpage = () => {
   const classes = useStyles();
   return (
     <div>
