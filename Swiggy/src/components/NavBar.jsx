@@ -98,13 +98,13 @@ export const ResponsiveAppBar = () => {
                                     display: { xs: 'block', md: 'none' },
                                 }}
                             >
-                                {/* <Button
+                                <Button
                                     key={"Location"}
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'black', display: 'block' }}
                                 >
                                     Location
-                                </Button> */}
+                                </Button>
 
                                 <Button
                                     key={"Products"}
@@ -138,7 +138,7 @@ export const ResponsiveAppBar = () => {
                         <Box sx={{ flexGrow: 1,alignItems: 'center', display: { xs: 'none', md: 'flex' } }}>
 
 
-                            <select style={{ width: "50%", height: "50px",mt:"20px"  }}>
+                            <select style={{ width: "30%", height: "50px",border:0  }}>
                                 <option>Select your Location</option>
                                 <option value="">Indore</option>
                                 <option value="">Pune</option>
