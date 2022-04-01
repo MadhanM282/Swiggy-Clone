@@ -30,12 +30,7 @@ const useStyles = makeStyles({
     margin: "auto",
   },
 });
-
 export const Restaurent = () => {
-
-
-
-
 
   const classes = useStyles();
   return (
