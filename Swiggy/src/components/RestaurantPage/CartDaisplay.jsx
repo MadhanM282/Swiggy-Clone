@@ -1,17 +1,31 @@
 import React from "react";
+import { CartDisplayDiv } from "../../Styles/RestaurantPage";
+import {
+  Row,
+  Minus,
+  One,
+  Plus,
+  Checkout,
+  CartTotal,
+} from "../../Styles/RestaurantPage";
+// import { Minus } from "../../Styles/RestaurantPage";
 
 export default function CartDisplay() {
   return (
-    <div>
+    <CartDisplayDiv>
       <h2>Cart</h2>
-      <p>no. of item</p>
-      <div>
-        <div></div>
-        <button>-</button>
-        <button>1</button>
-        <button>+</button>
-        <div>Price</div>
-      </div>
-    </div>
+      <Row>
+        <span>no. of item</span>
+        <Minus>-</Minus>
+        <One>1</One>
+        <Plus>+</Plus>
+        <span>Price</span>
+      </Row>
+      <CartTotal>
+        <h3>Subtotal</h3>
+        <h3>Rupees</h3>
+      </CartTotal>
+      <Checkout>Checkout</Checkout>
+    </CartDisplayDiv>
   );
 }

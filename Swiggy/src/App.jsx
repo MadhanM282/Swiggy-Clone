@@ -6,7 +6,7 @@ import { Home } from './components/landingPAge'
 import { SignInSide } from './components/login'
 import { ResponsiveAppBar } from './components/NavBar'
 // import { NavBar } from './components/NavBar'
-import { Restaurent } from './components/Restaurentpage'
+// import { Restaurent } from './components/Restaurentpage'
 // import PrimarySearchAppBar from './components/search'
 import { Restaurent } from "./components/RestaurantPage/Restaurentpage";
 
