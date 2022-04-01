@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import HotelMenu from "./HotelMenu";
 import Skeleton from "@mui/material/Skeleton";
+import { Link } from "react-router-dom";
 const Wrapper = styled.div`
   color: #171a29;
   font-family: sans-serif;
@@ -93,7 +94,7 @@ export const Landing = () => {
           >
             <div className="col-md-8">
               <h3 className="text-left">
-                <button className="btn btn-sm" onClick={getData()}>
+                <button className="btn btn-sm" onClick={() => getData()}>
                   <Equal src="../../../Icons/equal.svg" alt="restaurant" />
                 </button>
                 {rest.length} restaurants
@@ -149,7 +150,9 @@ export const Landing = () => {
         {loading ? (
           <>
             {rest.map((item) => (
-              <HotelMenu data={item} key={item._id} />
+              <Link to={"/restaurent"}>
+                <HotelMenu data={item} key={item._id} />
+              </Link>
             ))}
           </>
         ) : (

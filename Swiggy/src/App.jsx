@@ -22,7 +22,7 @@ function App() {
      
     
       <Routes>
-        {/* <Route path="/" element={<Landing />} /> */}
+        <Route path="/" element={<Landing />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/restaurent" element={<Restaurent />} />
         <Route path="/login" element={<SignInSide />} />
