@@ -25,12 +25,26 @@ export const OfferHeaderDiv = styled.div`
   padding: 30px 50px 50px 50px;
 `;
 
-export const ItemTypeDiv = styled.div`
+export const ItemTypeDiv = styled.ul`
   display: flex;
   flex-direction: column;
   width: 300px;
   text-align: right;
   margin: 30px 20px;
+`;
+
+export const ItemTypeList = styled.li`
+  font-size: 16px;
+  font-weight: bold;
+  color: ${({ isActive }) => (isActive ? "orange" : "initial")};
+  cursor: pointer;
+  &:hover {
+    color: orange;
+  }
+`;
+
+export const SelectedItemHeading = styled.h2`
+  padding: 20px 135px;
 `;
 
 export const ItemDisplayDiv = styled.div`
