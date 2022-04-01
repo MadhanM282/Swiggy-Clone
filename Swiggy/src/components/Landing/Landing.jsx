@@ -1,4 +1,6 @@
- import styled from "styled-components"
+ import axios from "axios";
+import { useEffect, useState } from "react";
+import styled from "styled-components"
  import HotelMenu from "./HotelMenu";
  const Wrapper = styled.div`
  color: #171a29;
@@ -43,6 +45,25 @@ box-shadow: 0 1px 4px 0 rgba(40, 44, 63, 0.4);
 `;
  
  export  const Landing = () =>{
+
+    const [rest , setRest] = useState([])
+
+  useEffect(() =>{
+      getData()
+  },[])
+
+
+    const getData = () =>{
+        axios.get("https://swiggy-list.herokuapp.com/rest").then((res) =>{
+        setRest(res.data)
+        }).then(() =>{
+            getData()
+        })
+    }
+
+
+
+
     return(
         <Wrapper>
         <div className='container-fluid '>
@@ -58,11 +79,11 @@ box-shadow: 0 1px 4px 0 rgba(40, 44, 63, 0.4);
                                 // onClick={allData}
                             >
                                 <Equal
-                                    src='/Icons/equal.svg'
+                                    src="../../../Icons/equal.svg"
                                     alt='restaurant'
                                 />
                             </button>
-                            {} restaurants
+                            {rest.length} restaurants
                         </h3>
                     </div>
 
@@ -88,7 +109,8 @@ box-shadow: 0 1px 4px 0 rgba(40, 44, 63, 0.4);
                         <button className='list-inline-item btn filter'>
                             Filters
                             <img
-                                src='Icons/filter.svg'
+                                src="../../../Icons/filter.svg"
+                                // 'Icons/filter.svg'
                                 alt='filter icon'
                                 style={{
                                     width: '30px',
@@ -110,9 +132,9 @@ box-shadow: 0 1px 4px 0 rgba(40, 44, 63, 0.4);
                 margin: 'auto',
             }}
         >
-            {/* {data.map((item) => (
+            {rest.map((item) => (
                 <HotelMenu data={item} key={item._id} />
-            ))} */}
+            ))}
         </div>
     </Wrapper>
     )
