@@ -1,23 +1,24 @@
 import { useSelector } from "react-redux"
-import { Log, Main } from "../../Styles/cart";
-import { Address } from "./Address";
+import { Log, LogsDiv, Main } from "../../Styles/cart";
+import { Address } from "./Address/Address";
+import { SuccessAddress } from "./Address/AddressSuccess";
 import { Empty } from "./Empty";
 import { Logged } from "./logstatcomponents/loggedin";
 import { Not_Logged } from "./logstatcomponents/notloggedin";
 
-export const Cart= ()=>{
-    const {cart,login,address,payment} = useSelector((store)=>store.cart)
-    const len =  cart.length
+export const Cart = () => {
+    const { cart, login, address, payment } = useSelector((store) => store.cart)
+    // const len = cart.length
     console.log('cart', cart);
-    return len===0?<Empty/>:(
+    return (
         <Main>
-             <div>
-                 <Log>{login?<Logged/>:<Not_Logged/>} </Log>
-                 <Address/>
-             </div>
-             <div>
+            <LogsDiv>
+                <Log>{login ? <Logged /> : <Not_Logged />} </Log>
+                {address?<SuccessAddress/>:<Address />}
+            </LogsDiv>
+            <div>
                 list
-             </div>
+            </div>
         </Main>
     )
-}           
+}

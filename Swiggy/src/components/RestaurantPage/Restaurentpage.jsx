@@ -31,36 +31,11 @@ const useStyles = makeStyles({
     margin: "auto",
   },
 });
-
 export const Restaurent = () => {
   const [dishes, setDishes] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [categories, setCategories] = useState([]);
   const [filteredDishes, setFilteredDishes] = useState([]);
-
-  const filterCategory = (selectedCategory) => {
-    const filterDishes = dishes.filter((item) => {
-      return item.category === selectedCategory;
-    });
-
-    setFilteredDishes(filterDishes);
-  };
-
-  useEffect(() => {
-    axios.get("https://swiggy-list.herokuapp.com/item").then((res) => {
-      setDishes(res.data);
-      setFilteredDishes(res.data);
-      const newCategories = res.data.reduce((ac, cv) => {
-        if (!ac.includes(cv.category)) {
-          ac.push(cv.category);
-        }
-        return ac;
-      }, []);
-      setCategories(newCategories);
-      setSelectedCategory(newCategories[0]);
-      console.log(res.data);
-    });
-  }, []);
 
   const classes = useStyles();
   return (

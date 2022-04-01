@@ -6,7 +6,7 @@ const Div = styled.div`
     font-family: sans-serif !important;
     overflow: hidden;
     border: 0;
-    width: 18.2rem !important;
+    width: 22.8rem !important;
     border: 1px solid white;
     border-radius: 0px;
     div > span {
@@ -54,21 +54,15 @@ const Discount = styled.p`
     margin-top: 15px;
 `;
 
-const HotelMenu = (props) => {
-    
+const HotelMenu = ({ data}) => {
 
-    // const { data } = props;
-
-    
-  
     return (
-        <>
+        <>  
             <div className='col'>
                 <Div className='card mb-2 btn' >
                     <img
                         className='card-img-top align-self-center mt-3 '
-                        src=""
-                        // {data.img_url}
+                        src={data.img_url}
                         alt='Restaurant Img'
                         style={{
                             width: '90%',
@@ -77,35 +71,35 @@ const HotelMenu = (props) => {
                     />
                     <div className='card-body text-left'>
                         <h5 className='card-title' style={{ color: '#171a29' }}>
-                            {/* {data.name} */}
+                            {data.name}
                             <br />
-                            {/* <Tag>{data.cuisines.join(', ')}</Tag> */}
+                            <Tag>{data.cuisines.join(', ')}</Tag>
                         </h5>
                         <div
                             className='card-text font-weight-normal'
                             style={{ fontSize: '12px' }}
                         >
                             <Badge
-                                // rating={data.rating}
+                                rating={data.rating}
                                 className='badge badge-success'
                             >
                                 <i className='fas fa-star mr-1'></i>
-                                {/* {data.rating} */}
+                                {data.rating}
                             </Badge>
                             <span>&bull;</span>
-                            {/* <span>{data.average_time} MINS</span> */}
+                            <span>{data.average_time} MINS</span>
                             <span>&bull;</span>
                             <span
                                 style={{
                                     marginRight: '0px',
                                 }}
                             >
-                                {/* ₹{data.average_cost} FOR TWO */}
+                                ₹{data.average_cost} FOR TWO
                             </span>
                             <div className='dropdown-divider'></div>
                             <Discount className='font-weight-normal'>
                                 <img
-                                    src='Icons/discountBadge.svg'
+                                    src='../../../Icons/discount.svg'
                                     alt='discountBadge'
                                     width='15px'
                                     style={{
@@ -126,6 +120,7 @@ const HotelMenu = (props) => {
                     </div>
                 </Div>
             </div>
+        
         </>
     );
 };

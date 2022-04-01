@@ -7,7 +7,7 @@ export const Main = styled.div`
 export const Main1 = styled.div`
     display: flex;
 `
-export const Seerestaurantsnearyou= styled.div`
+export const Seerestaurantsnearyou = styled.div`
     border: 1px solid red;
     margin: auto;
     width: fit-content;
@@ -16,13 +16,21 @@ export const Seerestaurantsnearyou= styled.div`
     color: white;
     font-weight: bolder;
     margin-top: 30px;
+    &:hover{
+     background:#e37214;
+     cursor: pointer;
+    }
 `
 
 export const Emptydiv = styled.div`
     width: fit-content;
     margin: auto;
     margin-top: 100px;
-    `
+    text-align: center;
+    
+    
+    /* border: 1px solid; */
+`
 export const Span = styled.span`
     height: 50px;
 
@@ -49,31 +57,42 @@ export const LogButton = styled.div`
     border: 1px solid #60b246;
     width: fit-content;
     height: fit-content;
-    line-height: 0px;
+    line-height: 2px;
     text-align: center;
-    padding:0px 30px;
+    padding:20px 30px 0px 30px;
+    cursor:pointer;
 `
 export const SignBttn = styled.div`
     border: 1px solid transparent;
     background: #60b246;
     width: fit-content;
     height: fit-content;
-    line-height: 0px;
+    line-height: 2px;
     text-align: center;
     margin-left: 30px;
+    cursor: pointer;
     color: white;
-    padding:0px 30px;
+    padding:20px 30px 0px 30px;
+    &:hover{
+        background:#409925 ;
+    }
     
 `
 export const LogButtona = styled.div`
     display: flex;
     margin-top:50px;
+    /* border: 1px solid; */
 `
 export const Pic = styled.div`
     margin-left: 70px;
     /* border: 1px solid red; */
 `
 export const Info = styled.div`
-    line-height:0px
+    line-height:19px;
 `
-/* export const */
+export const LogsDiv = styled.div`
+    width: 60%;
+    /* border: 1px solid red; */
+`
+
+// ---------------------- ADDRESS  ---------------------//

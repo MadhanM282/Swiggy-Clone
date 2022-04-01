@@ -12,5 +12,4 @@ export const AddressStat = () => ({ type: ADDRESS_STAT });
 export const PaymentStat = () => ({ type: PAYMENT_STAT });
 
 
-
 // export const CartRemove = (data)=>({type:CART,payload:data});
