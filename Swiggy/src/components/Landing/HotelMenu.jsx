@@ -6,7 +6,7 @@ const Div = styled.div`
     font-family: sans-serif !important;
     overflow: hidden;
     border: 0;
-    width: 18.2rem !important;
+    width: 22.8rem !important;
     border: 1px solid white;
     border-radius: 0px;
     div > span {
@@ -54,15 +54,10 @@ const Discount = styled.p`
     margin-top: 15px;
 `;
 
-const HotelMenu = (props) => {
-    
+const HotelMenu = ({ data}) => {
 
-    const { data } = props;
-
-    
-  
     return (
-        <>
+        <>  
             <div className='col'>
                 <Div className='card mb-2 btn' >
                     <img
@@ -125,6 +120,7 @@ const HotelMenu = (props) => {
                     </div>
                 </Div>
             </div>
+        
         </>
     );
 };
