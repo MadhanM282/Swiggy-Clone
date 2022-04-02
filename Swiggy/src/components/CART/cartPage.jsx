@@ -4,6 +4,7 @@ import { Log, LogsDiv, Main } from "../../Styles/cart";
 import { Address } from "./Address/Address";
 import { SuccessAddress } from "./Address/AddressSuccess";
 import { Empty } from "./Empty";
+import { ListData } from "./List/List";
 import { Logged } from "./logstatcomponents/loggedin";
 import { Not_Logged } from "./logstatcomponents/notloggedin";
 
@@ -17,8 +18,8 @@ export const Cart = () => {
                 <Log>{login ? <Logged /> : <Not_Logged />} </Log>
                 {address?<SuccessAddress/>:<Address />}
             </LogsDiv>
-            <Box sx={{height:"540px" ,border:1,width:"25%",mt:"30px"}}>
-                list
+            <Box sx={{backgroundColor: 'white',height:"540px" ,border:1,width:"25%",mt:"30px"}}>
+                <ListData/>
             </Box>
         </Main>
     )
