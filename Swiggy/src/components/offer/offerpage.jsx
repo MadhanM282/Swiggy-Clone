@@ -6,13 +6,15 @@ import HotelMenu from "../Landing/HotelMenu"
 import { useDispatch } from "react-redux";
 import { RestaurantAction } from "../../ReduxFiles/Restaurant/RestaurantAction";
 import Skeleton from "@mui/material/Skeleton";
+import { FaRoad } from "react-icons/fa"
+import Footer from "../Finalfooter/footer"
 
 
 
 export const OfferPage =()=>{
 
     const dispatch = useDispatch();
-    const [filter,setfilter]=useState([])
+    const [fil,setfil]=useState([])
     const [focused, setFocused] = useState(false)
     const [loading, setloading] = useState(false);
     const [Error, setError] = useState(false);
@@ -20,23 +22,21 @@ export const OfferPage =()=>{
     const onBlur = () => setFocused(false);
 
 
-    useEffect(()=>{getData()},[])
+    useEffect(()=>{getData()
+      },[])
 
     const [db,setdb]=useState([])
-  
 
-    const handleSearch=()=>{
-      
-        const filteredContacts = e.length === 0 ? db : 
-        db.filter(contact => contact.rating>3.5)
 
-                    console.log(filteredContacts,"filter")
-                    setfilter(filteredContacts)
-    }
+    
     const getData =()=>{
         axios.get("https://swiggy-list.herokuapp.com/rest").then(({data})=>{
-            setdb(data)
-            setloading(true);
+         
+           console.log(data)
+                setdb(data)
+                setloading(true);
+           
+          
         }).catch((err) => {
             setloading(false);
             setError(true);
@@ -48,10 +48,12 @@ export const OfferPage =()=>{
     return (
 
         <>
+        <img src="https://raw.githubusercontent.com/kushagra-01/random/main/offerpage.png" alt="offerpage" />
+        <br />
+        <br />
+        <br />
 
-
-      
-      <div
+     <div
           className="row row-cols-4"
           style={{
             width: "100%",
@@ -61,7 +63,14 @@ export const OfferPage =()=>{
           {" "}
           {loading ? (
             <>
-              {filter.map((item) => (
+              {db.filter((el)=>{if(el.rating>4.2){
+                  console.log(el)
+                  return true
+              }else{
+                  return false
+              }
+            })
+              .map((item) => (
                 <Link
                   to={"/restaurent"}
                   key={item._id}
@@ -75,6 +84,7 @@ export const OfferPage =()=>{
             <Skeleton height="300px" width="40%" />
           )}
         </div>
+        <Footer/>
 
       </>
     )
