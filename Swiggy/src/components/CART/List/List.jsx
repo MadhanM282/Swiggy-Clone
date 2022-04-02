@@ -42,7 +42,10 @@ export const ListData = () => {
                 <Box sx={{ border: 1 }}>
 
                     <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <Checkbox {...label} color="success" onChange={() => { setChk(!chk) }} />
+                        <Checkbox {...label} color="success" onChange={() => { 
+                            setChk(!chk);
+                        Totl=0
+                            }} />
                         <Typography>Opt in for No-contact Delivery</Typography>
                     </Box>
                     <Box sx={{ ml: 3 }}>

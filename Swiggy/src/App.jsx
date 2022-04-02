@@ -11,6 +11,7 @@ import { ResponsiveAppBar } from './components/NavBar'
 // import PrimarySearchAppBar from './components/search'
 import { Restaurent } from "./components/RestaurantPage/Restaurentpage";
 import { Landing } from './components/Landing/Landing';
+import { Searchbar } from './components/search/search'
 
 function App() {
   return (
@@ -26,8 +27,8 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/restaurent" element={<Restaurent />} />
         <Route path="/login" element={<SignInSide />} />
+        <Route path="/search" element={<Searchbar />} />
         
-
       </Routes>
      
     </div>

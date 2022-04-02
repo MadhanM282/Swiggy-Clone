@@ -163,8 +163,9 @@ export const ResponsiveAppBar = () => {
                                     height:"50px"
 
                                 }}
-                            >
+                                >   <Link to={"/search"}>
                                 <Button sx={{ my: 0, color: 'black', display: 'block' }}><AiOutlineSearch />Search</Button>
+                                </Link>
                                 <Button onClick={() => handleCloseNavMenu()} sx={{ my: 0, color: 'black', display: 'block' }}><IoIosHelpBuoy />Help</Button>
                                 <Button
                                     sx={{ my: 0,  color: 'black', display: 'block' }}
