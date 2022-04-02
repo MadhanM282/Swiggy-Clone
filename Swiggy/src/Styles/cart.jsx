@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Main = styled.div`
     display: flex;
     background: #e9ecee;
+    justify-content: space-evenly;
 `
 export const Main1 = styled.div`
     display: flex;
@@ -91,8 +92,7 @@ export const Info = styled.div`
     line-height:19px;
 `
 export const LogsDiv = styled.div`
-    width: 60%;
+    width: 65%;
     /* border: 1px solid red; */
 `
 
-// ---------------------- ADDRESS  ---------------------//

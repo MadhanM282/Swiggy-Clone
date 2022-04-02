@@ -49,16 +49,21 @@ const Equal = styled.img`
 export const Landing = () => {
   const [rest, setRest] = useState([]);
   const [loading, setloading] = useState(false);
+  const [Error, setError] = useState(false);
 
   useEffect(() => {
     getData();
   }, []);
 
   const getData = () => {
+    setloading(true);
     axios.get("https://swiggy-list.herokuapp.com/rest").then((res) => {
       setRest(res.data);
       setloading(true);
-    });
+    }).catch((err) => {
+      setloading(false);
+      setError(true)
+    })
   };
 
   const sorting = (order) => {
@@ -151,7 +156,7 @@ export const Landing = () => {
           <>
             {rest.map((item) => (
               <Link to={"/restaurent"}>
-                <HotelMenu data={item} key={item._id} />
+                <HotelMenu data={item} key={item._id} load={loading} err={Error}/>
               </Link>
             ))}
           </>

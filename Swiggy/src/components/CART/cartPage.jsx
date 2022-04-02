@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { useSelector } from "react-redux"
 import { Log, LogsDiv, Main } from "../../Styles/cart";
 import { Address } from "./Address/Address";
@@ -16,9 +17,9 @@ export const Cart = () => {
                 <Log>{login ? <Logged /> : <Not_Logged />} </Log>
                 {address?<SuccessAddress/>:<Address />}
             </LogsDiv>
-            <div>
+            <Box sx={{height:"540px" ,border:1,width:"25%",mt:"30px"}}>
                 list
-            </div>
+            </Box>
         </Main>
     )
 }

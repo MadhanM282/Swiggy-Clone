@@ -1,3 +1,4 @@
+import { Skeleton } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -6,7 +7,7 @@ const Div = styled.div`
     font-family: sans-serif !important;
     overflow: hidden;
     border: 0;
-    width: 22.8rem !important;
+    width: 20rem !important;
     border: 1px solid white;
     border-radius: 0px;
     div > span {

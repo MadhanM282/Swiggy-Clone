@@ -66,7 +66,7 @@ export const ResponsiveAppBar = () => {
 
                             sx={{ mr: 1, display: { xs: 'none', md: 'flex' } }}
                         >
-                            <img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
+                            <img onClick={() =>navigate("/")} src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -127,13 +127,13 @@ export const ResponsiveAppBar = () => {
                             </Menu>
 
                         </Box>
-                        <Typography
+                        <Typography 
                             variant="h6"
                             noWrap
                             component="div"
                             sx={{ flexGrow: 1,alignItems: 'center', display: { xs: 'flex', md: 'none' } }}
                         >
-                            <img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
+                            <img  src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
                         </Typography>
                         <Box sx={{ flexGrow: 1,alignItems: 'center', display: { xs: 'none', md: 'flex' } }}>
 
