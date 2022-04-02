@@ -19,6 +19,7 @@ import { IoIosHelpBuoy } from 'react-icons/io';
 import { MdLocalOffer } from 'react-icons/md';
 import { FaRegUser } from "react-icons/fa";
 import { BsFillCartPlusFill } from "react-icons/bs";
+import LoginDrawer from './Login/Login';
 
 const pages = ['Location', 'Products', 'Cart'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -191,11 +192,12 @@ export const ResponsiveAppBar = () => {
 
                         <Box sx={{ flexGrow: 0 }}>
                             {/* <Link to={'/'}> */}
-                            <Tooltip title="Login" >
+                            <LoginDrawer/>
+                            {/* <Tooltip title="Login" >
                                 <IconButton onClick={() => navigate("/login")} sx={{ p: 0 }}>
                                     <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                                 </IconButton>
-                            </Tooltip>
+                            </Tooltip> */}
                             {/* </Link> */}
                             {/* <Menu
                             sx={{ mt: '45px' }}
