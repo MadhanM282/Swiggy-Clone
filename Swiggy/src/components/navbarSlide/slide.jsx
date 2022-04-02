@@ -22,7 +22,7 @@ const Wrapper = styled.header`
   min-width: 100%;
   position: relative;
   margin: auto;
-  margin-top: 60px;
+  margin-top: -20px;
   padding: 20px 0;
   background: #fff;
 `;
