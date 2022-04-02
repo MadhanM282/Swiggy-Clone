@@ -12,7 +12,7 @@ import { ResponsiveAppBar } from './components/NavBar'
 import { Restaurent } from "./components/RestaurantPage/Restaurentpage";
 import { Landing } from './components/Landing/Landing';
 import { Searchbar } from './components/search/search'
-import LoginDrawer from './components/Login/Login'
+// import LoginDrawer from './components/Login/Login'
 
 function App() {
   return (
@@ -28,6 +28,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/restaurent" element={<Restaurent />} />
         <Route path="/search" element={<Searchbar />} />
+        <Route path="/login" element={<SignInSide />} />
         
       </Routes>
      
