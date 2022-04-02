@@ -1,21 +1,17 @@
 import { Box, Button, Checkbox, Typography } from "@mui/material"
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux"
-
+import { useSelector, useDispatch } from "react-redux"
 import { InputBox, P } from "../../../Styles/cart"
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-let Total = 0
-let all = Total;
+let Totl  = 0
 export const ListData = () => {
-    const [chk, setChk] = useState(false)                                                                                                                                           
+    const [chk, setChk] = useState(false)
     const { cart } = useSelector((store) => store.cart)
-    const [subt,setSubt] = useState(Total)
-    
-    
-    
     console.log('cart', cart);
-    const {login, address, payment, restaurentName,restaurentImg } = useSelector((store) => store.Stat)
-    
+    const {  restaurentName, restaurentImg } = useSelector((store) => store.Stat)
+    useEffect(() => {
+        Totl=0
+    },[])
     return (
         <Box sx={{ justifyContent: 'center' }}>
             <Box sx={{ boxShadow: 3, mt: "0px" }}>
@@ -26,9 +22,7 @@ export const ListData = () => {
             </Box>
             <Box sx={{ height: "331px", mt: "20px", width: "80%", m: 4, overflowY: 'scroll' }}>
                 {cart.map((el, i) => {
-                    Total+=el.price
-                    // all+=27+34.45
-                    console.log('Total', Total);
+                    Totl+=el.price
                     return <Box sx={{ display: "flex", justifyContent: "space-evenly" }} key={i}>
                         <p>{el.type}</p>
                         <p>{el.name}</p>
@@ -37,7 +31,7 @@ export const ListData = () => {
                             <Box sx={{ width: "25px", height: "25px", textAlign: "center" }}>1</Box>
                             <Box sx={{ width: "25px", height: "25px", textAlign: "center" }}>+</Box>
                         </Box>
-                        
+
                         <p>₹{el.price}</p>
                     </Box>
                 })}
@@ -63,11 +57,11 @@ export const ListData = () => {
                     <Typography variant="subtitle1">Bill Details</Typography>
                     <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                         <P>Item Total </P>
-                        <P>₹{subt}</P>
+                        <P>₹{Totl/2}</P>
                     </Box>
                     <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                         <P>Delivery Fee</P>
-                        
+
                         <P>₹27</P>
                     </Box>
                     <hr />
@@ -78,10 +72,10 @@ export const ListData = () => {
 
                 </Box>
             </Box>
-            <Box sx={{ display: "flex", justifyContent: "space-between",ml:4,mr:4,mt:0,mb:0}}> 
+            <Box sx={{ display: "flex", justifyContent: "space-between", ml: 4, mr: 4, mt: 0, mb: 0 }}>
 
                 <Typography>TO PAY</Typography>
-                <Typography>₹{(Total/2)+27+34.45}</Typography>
+                <Typography>₹{(Totl/2)+27+34.45}</Typography>
             </Box>
         </Box>
     )
