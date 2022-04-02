@@ -4,6 +4,7 @@ import styled from "styled-components";
 import HotelMenu from "./HotelMenu";
 import Skeleton from "@mui/material/Skeleton";
 import { Link } from "react-router-dom";
+import Promotions from "../navbarSlide/slide";
 const Wrapper = styled.div`
   color: #171a29;
   font-family: sans-serif;
@@ -85,7 +86,10 @@ export const Landing = () => {
   };
 
   return (
+    <>
+    <Promotions/>
     <Wrapper>
+      
       <div className="container-fluid ">
         <div className="big-box align-self-center">
           <div
@@ -160,5 +164,6 @@ export const Landing = () => {
         )}
       </div>
     </Wrapper>
+    </>
   );
 };
