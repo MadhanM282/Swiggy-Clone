@@ -1,6 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Img = styled.img`
   cursor: pointer;
@@ -41,25 +43,25 @@ function Promotions() {
           <Slider {...settings}>
             <div className="col">
               <Img
-                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/ygzzqf9ehrgilzdrlvva"
+                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/jkcbdbr3qdjuzgjepkjx"
                 alt="promotion img"
               />
             </div>
             <div className="col">
               <Img
-                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/yxin80o4v8om46ugqhml"
+                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/xax7qfs6dbmzdmzxq1dh"
                 alt="promotion img"
               />
             </div>
             <div className="col">
               <Img
-                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/becdlz529upvadzyy0l5"
+                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/c59djn2nskqlf0ork6wc"
                 alt="promotion img"
               />
             </div>
             <div className="col">
               <Img
-                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/gfto0rmtil1ca2zze18t"
+                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/qd0mwkv1mk3bxyy3x5fm"
                 alt="promotion img"
               />
             </div>
