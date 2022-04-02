@@ -5,6 +5,8 @@ import HotelMenu from "./HotelMenu";
 import Skeleton from "@mui/material/Skeleton";
 import { Link } from "react-router-dom";
 import Promotions from "../navbarSlide/slide";
+import { useDispatch } from "react-redux";
+import { RestaurantAction } from "../../ReduxFiles/Restaurant/RestaurantAction";
 const Wrapper = styled.div`
   color: #171a29;
   font-family: sans-serif;
@@ -48,6 +50,7 @@ const Equal = styled.img`
 `;
 
 export const Landing = () => {
+  const dispatch = useDispatch();
   const [rest, setRest] = useState([]);
   const [loading, setloading] = useState(false);
   const [Error, setError] = useState(false);
@@ -58,13 +61,16 @@ export const Landing = () => {
 
   const getData = () => {
     setloading(true);
-    axios.get("https://swiggy-list.herokuapp.com/rest").then((res) => {
-      setRest(res.data);
-      setloading(true);
-    }).catch((err) => {
-      setloading(false);
-      setError(true)
-    })
+    axios
+      .get("https://swiggy-list.herokuapp.com/rest")
+      .then((res) => {
+        setRest(res.data);
+        setloading(true);
+      })
+      .catch((err) => {
+        setloading(false);
+        setError(true);
+      });
   };
 
   const sorting = (order) => {
@@ -92,84 +98,86 @@ export const Landing = () => {
 
   return (
     <>
-    <Promotions/>
-    <Wrapper>
-      
-      <div className="container-fluid ">
-        <div className="big-box align-self-center">
-          <div
-            className="row mb-0 pb-0"
-            style={{ borderBottom: "3px solid whitesmoke" }}
-          >
-            <div className="col-md-8">
-              <h3 className="text-left">
-                <button className="btn btn-sm" onClick={() => getData()}>
-                  <Equal src="../../../Icons/equal.svg" alt="restaurant" />
-                </button>
-                {rest.length} restaurants
-              </h3>
-            </div>
+      <Promotions />
+      <Wrapper>
+        <div className="container-fluid ">
+          <div className="big-box align-self-center">
+            <div
+              className="row mb-0 pb-0"
+              style={{ borderBottom: "3px solid whitesmoke" }}
+            >
+              <div className="col-md-8">
+                <h3 className="text-left">
+                  <button className="btn btn-sm" onClick={() => getData()}>
+                    <Equal src="../../../Icons/equal.svg" alt="restaurant" />
+                  </button>
+                  {rest.length} restaurants
+                </h3>
+              </div>
 
-            <ul className="list-inline">
-              <button
-                className="list-inline-item btn"
-                onClick={() => sorting("average_time")}
-              >
-                Relevance
-              </button>
-              <button
-                className="btn list-inline-item"
-                onClick={() => sorting("average_cost")}
-              >
-                Cost for Two
-              </button>
-              <button
-                className="list-inline-item btn"
-                onClick={() => sorting("rating")}
-              >
-                Rating
-              </button>
-              <button className="list-inline-item btn filter">
-                Filters
-                <img
-                  src="../../../Icons/filter.svg"
-                  // 'Icons/filter.svg'
-                  alt="filter icon"
-                  style={{
-                    width: "30px",
-                    height: "30px",
-                    border: "1.5px solid #fc8019 ",
-                    borderRadius: "50%",
-                    marginLeft: "8px",
-                  }}
-                />
-              </button>
-            </ul>
+              <ul className="list-inline">
+                <button
+                  className="list-inline-item btn"
+                  onClick={() => sorting("average_time")}
+                >
+                  Relevance
+                </button>
+                <button
+                  className="btn list-inline-item"
+                  onClick={() => sorting("average_cost")}
+                >
+                  Cost for Two
+                </button>
+                <button
+                  className="list-inline-item btn"
+                  onClick={() => sorting("rating")}
+                >
+                  Rating
+                </button>
+                <button className="list-inline-item btn filter">
+                  Filters
+                  <img
+                    src="../../../Icons/filter.svg"
+                    // 'Icons/filter.svg'
+                    alt="filter icon"
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      border: "1.5px solid #fc8019 ",
+                      borderRadius: "50%",
+                      marginLeft: "8px",
+                    }}
+                  />
+                </button>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="row row-cols-4"
-        style={{
-          width: "100%",
-          margin: "auto",
-        }}
-      >
-        {" "}
-        {loading ? (
-          <>
-            {rest.map((item) => (
-
-              <Link to={"/restaurent"} key={item._id}>
-                <HotelMenu data={item} key={item._id}/>
-              </Link>
-            ))}
-          </>
-        ) : (
-          <Skeleton height="300px" width="40%" />
-        )}
-      </div>
-    </Wrapper>
+        <div
+          className="row row-cols-4"
+          style={{
+            width: "100%",
+            margin: "auto",
+          }}
+        >
+          {" "}
+          {loading ? (
+            <>
+              {rest.map((item) => (
+                <Link
+                  to={"/restaurent"}
+                  key={item._id}
+                  onClick={() => dispatch(RestaurantAction(item))}
+                >
+                  <HotelMenu data={item} key={item._id} />
+                </Link>
+              ))}
+            </>
+          ) : (
+            <Skeleton height="300px" width="40%" />
+          )}
+        </div>
+      </Wrapper>
     </>
   );
 };

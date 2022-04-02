@@ -18,12 +18,12 @@ export default function ItemDisplay(Props) {
       <ItemDesc>
         <div>
           <h4>{Props.type}</h4>
-          <h4>{Props.name}</h4>
+          <h6>{Props.name}</h6>
           <p>{`₹${Props.price}`}</p>
         </div>
         <Column>
           <ItemImg src={Props.image} alt="image" />
-          <AddBtn>Add</AddBtn>
+          <AddBtn onClick={Props.onClick}>Add</AddBtn>
           <CustomP>Customisable</CustomP>
         </Column>
       </ItemDesc>
