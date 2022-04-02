@@ -13,6 +13,7 @@ import ItemDisplay from "./ItemDisplay";
 import CartDisplay from "./CartDisplay";
 import { SelectedItemHeading } from "../../Styles/RestaurantPage";
 import { useSelector } from "react-redux";
+import Footer from "../Finalfooter/footer";
 
 const useStyles = makeStyles({
   Wrapper: {
@@ -123,6 +124,10 @@ export const Restaurent = () => {
         </div>
         <CartDisplay />
       </div>
+      <br/>
+      <br/>
+      <br/>
+    <Footer/>
     </div>
   );
 };
