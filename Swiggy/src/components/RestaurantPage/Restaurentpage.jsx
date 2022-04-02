@@ -10,7 +10,7 @@ import RestaurantInfo from "./RestaurantInfo";
 import OfferHeader from "./OfferHeader";
 import ItemType from "./ItemType";
 import ItemDisplay from "./ItemDisplay";
-import CartDisplay from "./CartDaisplay";
+import CartDisplay from "./CartDisplay";
 import { SelectedItemHeading } from "../../Styles/RestaurantPage";
 import { useSelector } from "react-redux";
 

@@ -13,14 +13,14 @@ import {
 
 export default function CartDisplay() {
   const cart = useSelector((state) => {
+    console.log("##", state);
     return state.cart;
   });
-
   return (
     <CartDisplayDiv>
       <h2>Cart</h2>
-      <ul className="list_style_none">
-        {cart.cart.map((item) => {
+      {/* <ul className="list_style_none">
+        {stat.stat.map((item) => {
           return (
             <li>
               <Row>
@@ -33,7 +33,7 @@ export default function CartDisplay() {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
 
       <CartTotal>
         <h3>Subtotal</h3>
