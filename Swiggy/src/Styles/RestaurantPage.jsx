@@ -58,7 +58,7 @@ export const ItemDisplayDiv = styled.div`
   padding: 20px 50px;
   border-bottom: 1px solid;
   margin-left: 50px;
-  overflow: scroll;
+  /* overflow: scroll; */
 `;
 
 export const CartDisplayDiv = styled.div`
