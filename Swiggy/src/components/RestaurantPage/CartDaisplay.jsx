@@ -15,13 +15,12 @@ export default function CartDisplay() {
   const cart = useSelector((state) => {
     return state.cart;
   });
-  console.log(cart)
 
   return (
     <CartDisplayDiv>
       <h2>Cart</h2>
       <ul className="list_style_none">
-        {cart.cartItems.map((item) => {
+        {cart.cart.map((item) => {
           return (
             <li>
               <Row>
