@@ -1,5 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import HotelMenu from "../Landing/HotelMenu"
 
 
 export const Searchbar =()=>{
@@ -47,12 +49,9 @@ export const Searchbar =()=>{
 
 
     </div>
-
-
-{filter.map((e)=>{
-
- return <div>{e.name}</div>
-})}
+    <Link to={"/restaurent"} key={filter._id}>
+    <HotelMenu data={filter} key={filter._id}/>
+    </Link>
 
     </>
     )

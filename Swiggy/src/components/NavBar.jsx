@@ -19,6 +19,10 @@ import { IoIosHelpBuoy } from 'react-icons/io';
 import { MdLocalOffer } from 'react-icons/md';
 import { FaRegUser } from "react-icons/fa";
 import { BsFillCartPlusFill } from "react-icons/bs";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import SellIcon from '@mui/icons-material/Sell';
+import SupportIcon from '@mui/icons-material/Support';
+// import LoginDrawer from './Login/Login';
 
 const pages = ['Location', 'Products', 'Cart'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -163,13 +167,14 @@ export const ResponsiveAppBar = () => {
                                     height:"50px"
 
                                 }}
-                            >
-                                <Button sx={{ my: 0, color: 'black', display: 'block' }}><AiOutlineSearch />Search</Button>
-                                <Button onClick={() => handleCloseNavMenu()} sx={{ my: 0, color: 'black', display: 'block' }}><IoIosHelpBuoy />Help</Button>
+                                >   <Link to={"/search"}>
+                                <Button sx={{ my: 0, color: 'black', display: 'block',mt:1 }}><AiOutlineSearch />Search</Button>
+                                </Link>
+                                <Button onClick={() => handleCloseNavMenu()} sx={{ my: 0, color: 'black', display: 'block' }}><SupportIcon />Help</Button>
                                 <Button
                                     sx={{ my: 0,  color: 'black', display: 'block' }}
                                     
-                                > <MdLocalOffer />Offers</Button>
+                                > <SellIcon />Offers</Button>
 
                                 <Button
                                     key={"Cart"}
@@ -179,7 +184,7 @@ export const ResponsiveAppBar = () => {
                                     }}
                                     sx={{ my: 0, color: 'black', display: 'block' }}
                                 >
-                                    <BsFillCartPlusFill /> Cart
+                                    <ShoppingBagIcon /> Cart
                                 </Button>
                             </Box>
 
@@ -190,6 +195,7 @@ export const ResponsiveAppBar = () => {
 
                         <Box sx={{ flexGrow: 0 }}>
                             {/* <Link to={'/'}> */}
+                            {/* <LoginDrawer/> */}
                             <Tooltip title="Login" >
                                 <IconButton onClick={() => navigate("/login")} sx={{ p: 0 }}>
                                     <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
