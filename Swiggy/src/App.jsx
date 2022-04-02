@@ -12,6 +12,7 @@ import { ResponsiveAppBar } from './components/NavBar'
 import { Restaurent } from "./components/RestaurantPage/Restaurentpage";
 import { Landing } from './components/Landing/Landing';
 import { Searchbar } from './components/search/search'
+import { OfferPage } from './components/offer/offerpage'
 // import LoginDrawer from './components/Login/Login'
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
         <Route path="/restaurent" element={<Restaurent />} />
         <Route path="/search" element={<Searchbar />} />
         <Route path="/login" element={<SignInSide />} />
-        
+        <Route path="/offers" element={< OfferPage/>} />
       </Routes>
      
     </div>

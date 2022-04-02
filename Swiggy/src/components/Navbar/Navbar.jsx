@@ -54,7 +54,7 @@ export const Navbar = () => {
         >
           <Link to={"/search"} style={{ textDecoration: "none", color: "black", display: "flex" }}><AiOutlineSearch style={{ marginTop: "20px" }} /><p>Search</p></Link>
           <p><IoIosHelpBuoy />Help</p>
-          <p><MdLocalOffer />Offers</p>
+          <Link to={"/offers"}> <p><MdLocalOffer />Offers</p></Link> 
           <Link to={"/login"} style={{ textDecoration: "none", color: "black" }}><p><FaRegUser />Sign In</p></Link>
           <p><BsFillCartPlusFill />Cart</p>
         </Box>
