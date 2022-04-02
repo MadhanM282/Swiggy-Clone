@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-
+import { useEffect, useState } from "react";
 
 import { makeStyles } from "@mui/styles";
 
@@ -11,6 +11,7 @@ import OfferHeader from "./OfferHeader";
 import ItemType from "./ItemType";
 import ItemDisplay from "./ItemDisplay";
 import CartDisplay from "./CartDaisplay";
+import { SelectedItemHeading } from "../../Styles/RestaurantPage";
 
 const useStyles = makeStyles({
   Wrapper: {
@@ -31,6 +32,10 @@ const useStyles = makeStyles({
   },
 });
 export const Restaurent = () => {
+  const [dishes, setDishes] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [categories, setCategories] = useState([]);
+  const [filteredDishes, setFilteredDishes] = useState([]);
 
   const classes = useStyles();
   return (
@@ -47,14 +52,31 @@ export const Restaurent = () => {
         <OfferHeader />
       </div>
       <div className={`${classes.LowerDivWrapper}`}>
-        <ItemType item={[1, 2, 3, 4, 5]} />
-        <ItemDisplay
-          category="North Indian"
-          type="veg"
-          name="Razma Chawal"
-          price="400"
-          image="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bmwn4n4bn6n1tcpc8x2h"
+        <ItemType
+          selectedCategory={selectedCategory}
+          item={categories}
+          onClick={(data) => {
+            setSelectedCategory(data);
+            filterCategory(data);
+          }}
         />
+        <div>
+          <SelectedItemHeading>{selectedCategory}</SelectedItemHeading>
+          <ul className="list_style_none">
+            {filteredDishes.map((item) => {
+              return (
+                <li key={item._id}>
+                  <ItemDisplay
+                    veg={item.veg}
+                    name={item.name}
+                    price={item.price}
+                    image={item.img_url}
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
         <CartDisplay />
       </div>
     </div>

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import HotelMenu from "./HotelMenu";
 import Skeleton from "@mui/material/Skeleton";
 import { Link } from "react-router-dom";
+import Promotions from "../navbarSlide/slide";
 const Wrapper = styled.div`
   color: #171a29;
   font-family: sans-serif;
@@ -90,7 +91,10 @@ export const Landing = () => {
   };
 
   return (
+    <>
+    <Promotions/>
     <Wrapper>
+      
       <div className="container-fluid ">
         <div className="big-box align-self-center">
           <div
@@ -155,8 +159,13 @@ export const Landing = () => {
         {loading ? (
           <>
             {rest.map((item) => (
+<<<<<<< HEAD
               <Link to={"/restaurent"}>
                 <HotelMenu data={item} key={item._id} load={loading} err={Error}/>
+=======
+              <Link to={"/restaurent"} key={item._id}>
+                <HotelMenu data={item} key={item._id} />
+>>>>>>> fb33240d30cbdc99b814bd6695d3c8930fe28295
               </Link>
             ))}
           </>
@@ -165,5 +174,6 @@ export const Landing = () => {
         )}
       </div>
     </Wrapper>
+    </>
   );
 };
