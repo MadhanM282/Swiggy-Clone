@@ -1,10 +1,13 @@
 import { Box } from "@mui/material"
+import { useEffect } from "react"
 import { useSelector,useDispatch } from "react-redux"
 import { AddressStat } from "../../../ReduxFiles/cart/cartAction"
 import { SignBttn, Span, Span1 } from "../../../Styles/cart"
 
 export const SavedAddress = () => {
-    const { cart, login, address, payment } = useSelector((store) => store.cart)
+    const {login, address, payment } = useSelector((store) => store.Stat)
+    
+    
     const dispatch = useDispatch()
     return (
 

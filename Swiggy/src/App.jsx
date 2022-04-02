@@ -30,6 +30,7 @@ function App() {
         <Route path="/search" element={<Searchbar />} />
         
       </Routes>
+     
     </div>
   );
 }

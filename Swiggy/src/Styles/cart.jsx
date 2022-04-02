@@ -95,4 +95,15 @@ export const LogsDiv = styled.div`
     width: 65%;
     /* border: 1px solid red; */
 `
+export const InputBox = styled.input`
+    border:0px;
+    &:onFocus{
+        border:0px
+    };
+    font-size: 10px;
+    background: transparent;
+`
 
+export const P = styled.p`
+    font-size: 12px
+`
