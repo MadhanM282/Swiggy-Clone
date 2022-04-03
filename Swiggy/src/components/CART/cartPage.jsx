@@ -17,7 +17,7 @@ export const Cart = () => {
     const { login, address, payment } = useSelector((store) => store.Stat)
     // const len = cart.length
     console.log('cart', cart);
-    return (
+    return cart.length===0? <Empty/>: (
         <Main>
             <LogsDiv>
                 <Log>{!login ? <Logged/> : <Not_Logged/>} </Log>

@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom"
 import { Info, LogButton, LogButtona, Main, Main1, Pic, SignBttn, Span, Span1 } from "../../../Styles/cart"
-
+import LoginDrawer from "../../Login/Login"
+import SignUp from '../../Login/SignUp'
 export const Not_Logged = () => {
+    const navigate = useNavigate()
     return (
         <Main1>
 
@@ -8,7 +11,7 @@ export const Not_Logged = () => {
                 <h1><Span1><img src="https://img.icons8.com/small/344/ffffff/gender-neutral-user.png" alt="" width="25px" /></Span1>Account</h1>
                 <p>To place your order now, log in to your existing account or sign up</p>
                 <LogButtona>
-                    <LogButton>
+                    <LogButton onClick={()=>{navigate("/login")}}>
                         <p>Have an account?</p>
                         <p>LOG IN</p>
                     </LogButton>

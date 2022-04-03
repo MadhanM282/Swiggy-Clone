@@ -7,27 +7,24 @@ let Totl  = 0
 export const ListData = () => {
     const [chk, setChk] = useState(false)
     const { cart } = useSelector((store) => store.cart)
-    console.log('cart', cart);
-    const {  restaurentName, restaurentImg } = useSelector((store) => store.Stat)
-    console.log('restaurentName', restaurentName);
+    const data = useSelector((store)=>store.restaurant.restaurantData)
     useEffect(() => {
         Totl=0
     },[])
     return (
         <Box sx={{ justifyContent: 'center' }}>
             <Box sx={{ boxShadow: 3, mt: "0px" }}>
-                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', width: "50%", pt: "10px", pb: "10px" }}>
-                    <img src={restaurentImg} alt="" width="50px" />
-                    <h6>{restaurentName}</h6>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', width: "70%", pt: "10px", pb: "10px" }}>
+                    <img src={data.img_url} alt="" width="50px" />
+                    <h6>{data.name}</h6>
                 </Box>
             </Box>
-            <Box sx={{ height: "331px", mt: "20px", width: "80%", m: 4, overflowY: 'scroll' }}>
+            <Box sx={{ height: "331px", mt: "20px", width: "80%", m: 4, overflowY: 'scroll'}}>
                 {cart.map((el, i) => {
                     Totl+=el.price
-                    return <Box sx={{ display: "flex", justifyContent: "space-evenly" }} key={i}>
-                        <p>{el.type}</p>
+                    return <Box sx={{ display: "flex", justifyContent: "space-between" }} key={i}>
                         <p>{el.name}</p>
-                        <Box sx={{ border: 1, display: "flex", alignItems: "center", height: "25px" }}>
+                        <Box sx={{ border: 1, display: "flex", alignItems: "center", height: "25px",justifyContent: "center" }}>
                             <Box sx={{ width: "25px", height: "25px", textAlign: "center" }}>-</Box>
                             <Box sx={{ width: "25px", height: "25px", textAlign: "center" }}>1</Box>
                             <Box sx={{ width: "25px", height: "25px", textAlign: "center" }}>+</Box>
@@ -40,8 +37,7 @@ export const ListData = () => {
                     <img src="https://img.icons8.com/ios-glyphs/14/chat.png" alt="" />
                     <InputBox type="text" placeholder="Any Suggestions?" />
                 </Box>
-                <Box sx={{ border: 1 }}>
-
+                <Box>
                     <Box sx={{ display: "flex", alignItems: "center" }}>
                         <Checkbox {...label} color="success" onChange={() => { 
                             setChk(!chk);

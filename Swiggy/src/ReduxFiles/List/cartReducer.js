@@ -2,20 +2,7 @@ import { CART } from "./cartAction";
 const initial = {
    
     cart: [
-        {
-
-            name: "biryani",
-            price: 500,
-            type: "veg",
-
-        },
-        {
-
-            name: "biryani",
-            price: 200,
-            type: "veg",
-
-        }
+        
     ]
 
 };

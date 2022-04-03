@@ -1,11 +1,15 @@
-import React, { useState } from "react";
-import clsx from "clsx";
-import { makeStyles } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
-import styled from "styled-components";
-import TextField from "@material-ui/core/TextField";
-import axios from "axios";
-import SignUp from "./SignUp";
+
+import React, { useState } from 'react';
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import styled from 'styled-components';
+import TextField from '@material-ui/core/TextField';
+import axios from 'axios';
+import SignUp from './SignUp';
+import { useDispatch } from 'react-redux';
+import { LogStat } from '../../ReduxFiles/cart/cartAction';
+
 
 const Div = styled.div`
   font-family: sans-serif;
@@ -124,12 +128,13 @@ export default function LoginDrawer() {
 }
 
 function OtpDrawer() {
-  const [otp, setOtp] = useState("");
-  const classes = useStyles();
-  const [state2, setState2] = React.useState({
-    bottom: false,
-  });
 
+    const dispatch = useDispatch()
+    const [otp, setOtp] = useState('');
+    const classes = useStyles();
+    const [state2, setState2] = React.useState({
+        bottom: false,
+    });
   const toggleOTPDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -140,6 +145,7 @@ function OtpDrawer() {
 
     setState2({ ...state2, [anchor]: open });
   };
+
 
   // const handleVerify = () => {
   //     // console.log(phoneNumber, otp);
@@ -185,6 +191,7 @@ function OtpDrawer() {
   //         });
   // };
 
+
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
@@ -197,9 +204,13 @@ function OtpDrawer() {
         <Div className="row">
           <Div className="col text-left">
             <button
-              type="button"
-              className="btn btn-sm"
-              onClick={toggleOTPDrawer(anchor, false)}
+
+                type='button'
+                className="btn btn-sm"
+                onClick={()=>{dispatch(LogStat())
+                    toggleOTPDrawer(anchor, false)
+                }}
+
             >
               <i className="fas fa-arrow-left fa-lg"></i>
             </button>

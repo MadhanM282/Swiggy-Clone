@@ -14,7 +14,7 @@ import { Landing } from './components/Landing/Landing';
 import { Searchbar } from './components/search/search'
 import { OfferPage } from './components/offer/offerpage'
 import Confirmation from './components/orderConfirm/orderConfirmation'
-// import LoginDrawer from './components/Login/Login'
+import LoginDrawer from './components/Login/Login'
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/restaurent" element={<Restaurent />} />
         <Route path="/search" element={<Searchbar />} />
-        {/* <Route path="/login" element={<SignInSide />} /> */}
+        <Route path="/login" element={<LoginDrawer />} />
         <Route path="/offers" element={< OfferPage/>} />
         <Route path="/success" element={<Confirmation/>}/>
       </Routes>
