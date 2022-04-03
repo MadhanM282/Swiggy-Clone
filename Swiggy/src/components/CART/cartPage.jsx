@@ -4,10 +4,13 @@ import { useSelector } from "react-redux"
 import { Log, LogsDiv, Main } from "../../Styles/cart";
 import { Address } from "./Address/Address";
 import { SuccessAddress } from "./Address/AddressSuccess";
+import { Dummy } from "./Address/Dummy";
 import { Empty } from "./Empty";
 import { ListData } from "./List/List";
 import { Logged } from "./logstatcomponents/loggedin";
 import { Not_Logged } from "./logstatcomponents/notloggedin";
+import { Pay } from "./Payment/Detail";
+import { DummyP } from "./Payment/Dummy";
 
 export const Cart = () => {
     
@@ -22,8 +25,9 @@ export const Cart = () => {
     return (
         <Main>
             <LogsDiv>
-                <Log>{login ? <Logged/> : <Not_Logged/>} </Log>
-                {address?<SuccessAddress/>:<Address />}
+                <Log>{!login ? <Logged/> : <Not_Logged/>} </Log>
+                {!login? <Dummy/> :address?<SuccessAddress/>:<Address />}
+                {!address?<DummyP/>:<Pay/>}
             </LogsDiv>
             <Box sx={{backgroundColor: 'white',height:"540px" ,border:1,width:"25%",mt:"30px"}}>
                 <ListData/>

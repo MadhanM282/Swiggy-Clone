@@ -1,4 +1,4 @@
-export const List = ()=>{
+export const Payment = ()=>{
     return (
         <div>
             

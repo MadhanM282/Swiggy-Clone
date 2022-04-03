@@ -105,5 +105,13 @@ export const InputBox = styled.input`
 `
 
 export const P = styled.p`
-    font-size: 12px
+    font-size: 12px;
+`
+
+export const PaymentImg= styled.span`
+    display: flex;
+    img{
+        margin-right: 10px;
+        margin-top: 10px;
+    }
 `
