@@ -31,9 +31,11 @@ export const OfferHeaderDiv = styled.div`
 export const ItemTypeDiv = styled.ul`
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 280px;
   text-align: right;
-  margin: 30px 20px;
+  margin: 50px 20px 50px 80px;
+  padding-right: 40px;
+  border-right: 1px solid gray;
 `;
 
 export const ItemTypeList = styled.li`
@@ -51,18 +53,18 @@ export const SelectedItemHeading = styled.h2`
 `;
 
 export const ItemDisplayDiv = styled.div`
-  width: 620px;
+  width: 680px;
   height: auto;
   display: flex;
   flex-direction: column;
-  padding: 20px 50px;
+  padding: 20px 0px;
   border-bottom: 1px solid;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   /* overflow: scroll; */
 `;
 
 export const CartDisplayDiv = styled.div`
-  width: 300px;
+  width: 400px;
   height: auto;
   padding: 20px 70px;
 `;
@@ -86,23 +88,40 @@ export const Column = styled.div`
 
 export const Minus = styled.button`
   color: grey;
+  width: 30px;
+  height: 30px;
   margin-left: 20px;
+  /* border: none; */
 `;
 
 export const Plus = styled.button`
   color: green;
   margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  /* border: none; */
 `;
 
 export const One = styled.button`
   color: green;
+  width: 30px;
+  height: 30px;
+  /* border: none; */
 `;
 
 export const AddBtn = styled.button`
   margin-top: -15px;
-  width: 50px;
-  margin-left: 90px;
+  width: 100px;
+  margin-left: 65px;
+  padding: 3px;
   color: green;
+  background-color: white;
+  border: 1px solid grey;
+`;
+
+export const IconImg = styled.img`
+  width: 20px;
+  height: 20px;
 `;
 
 export const ItemImg = styled.img`
@@ -115,11 +134,10 @@ export const ItemImg = styled.img`
 export const CustomP = styled.p`
   padding-left: 75px;
   font-size: 12px;
-  /* text-align: center; */
 `;
 
 export const Checkout = styled.button`
-  background-color: green;
+  background-color: rgb(96, 178, 70);
   color: white;
   height: 50px;
   width: 300px;

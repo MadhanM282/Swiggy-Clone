@@ -13,32 +13,37 @@ import {
 
 export default function CartDisplay() {
   const cart = useSelector((state) => {
-    console.log("##", state);
-    return state.cart;
+    return state.cart.cart;
   });
+
+  // const subtotal = (cart) => {
+  //   console.log("cart", cart);
+  // };
+
   return (
     <CartDisplayDiv>
       <h2>Cart</h2>
-      {/* <ul className="list_style_none">
-        {stat.stat.map((item) => {
+      <ul className="list_style_none">
+        {cart.map((item) => {
           return (
             <li>
               <Row>
                 <span>{item.name}</span>
                 <Minus>-</Minus>
-                <One>1</One>
+                <One>{1}</One>
                 <Plus>+</Plus>
-                <span>Price</span>
+                <span>{`₹${item.price}`}</span>
               </Row>
             </li>
           );
         })}
-      </ul> */}
+      </ul>
 
       <CartTotal>
-        <h3>Subtotal</h3>
-        <h3>Rupees</h3>
+        <h5>Subtotal</h5>
+        {/* <h3>{total}</h3> */}
       </CartTotal>
+      <p>Extra charges may apply</p>
       <Checkout>Checkout</Checkout>
     </CartDisplayDiv>
   );

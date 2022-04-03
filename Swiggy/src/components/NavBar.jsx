@@ -171,10 +171,10 @@ export const ResponsiveAppBar = () => {
                                 <Button sx={{ my: 0, color: 'black', display: 'block',mt:1 }}><AiOutlineSearch />Search</Button>
                                 </Link>
                                 <Button onClick={() => handleCloseNavMenu()} sx={{ my: 0, color: 'black', display: 'block' }}><SupportIcon />Help</Button>
-                                <Button
+                               <Link to={"/offers"}> <Button
                                     sx={{ my: 0,  color: 'black', display: 'block' }}
                                     
-                                > <SellIcon />Offers</Button>
+                                > <SellIcon />Offers</Button></Link>
 
                                 <Button
                                     key={"Cart"}

@@ -2,7 +2,6 @@ import React from "react";
 import { InfoDiv, ExtraInfoDiv } from "../../Styles/RestaurantPage";
 
 export default function RestaurantInfo(Props) {
-  console.log(Props);
   return (
     <div>
       <InfoDiv>
