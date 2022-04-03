@@ -123,10 +123,10 @@ export const Restaurent = () => {
         </div>
         <CartDisplay />
       </div>
-      <br/>
-      <br/>
-      <br/>
-    <Footer/>
+      <br />
+      <br />
+      <br />
+      <Footer />
     </div>
   );
 };
