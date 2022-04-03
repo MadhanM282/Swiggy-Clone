@@ -46,9 +46,7 @@ export const ResponsiveAppBar = () => {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
-    const navigator = () => {
-
-    }
+    
     const darkTheme = createTheme({
         palette: {
             mode: "light",
@@ -60,7 +58,7 @@ export const ResponsiveAppBar = () => {
 
     return (
         <ThemeProvider theme={darkTheme}>
-            <AppBar position="sticky" color="primary" sx={{height:"70px"}} >
+            <AppBar position="sticky" color="primary" sx={{ height: "70px" }} >
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Typography
@@ -70,7 +68,7 @@ export const ResponsiveAppBar = () => {
 
                             sx={{ mr: 1, display: { xs: 'none', md: 'flex' } }}
                         >
-                            <img onClick={() =>navigate("/")} src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
+                            <img onClick={() => navigate("/")} src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -131,18 +129,18 @@ export const ResponsiveAppBar = () => {
                             </Menu>
 
                         </Box>
-                        <Typography 
+                        <Typography
                             variant="h6"
                             noWrap
                             component="div"
-                            sx={{ flexGrow: 1,alignItems: 'center', display: { xs: 'flex', md: 'none' } }}
+                            sx={{ flexGrow: 1, alignItems: 'center', display: { xs: 'flex', md: 'none' } }}
                         >
-                            <img  src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
+                            <img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
                         </Typography>
-                        <Box sx={{ flexGrow: 1,alignItems: 'center', display: { xs: 'none', md: 'flex' } }}>
+                        <Box sx={{ flexGrow: 1, alignItems: 'center', display: { xs: 'none', md: 'flex' } }}>
 
 
-                            <select style={{ width: "30%", height: "50px",border:0  }}>
+                            <select style={{ width: "30%", height: "50px", border: 0 }}>
                                 <option>Select your Location</option>
                                 <option value="">Indore</option>
                                 <option value="">Pune</option>
@@ -150,7 +148,7 @@ export const ResponsiveAppBar = () => {
                                 <option value="">Delhi</option>
                                 <option value="">Banglore</option>
                             </select>
-                            
+
 
                             <Box
                                 sx={{
@@ -162,18 +160,18 @@ export const ResponsiveAppBar = () => {
                                     justifyContent: "flex-end",
                                     bgcolor: 'background.paper',
                                     borderRadius: 1,
-                                    
-                                    width:"70%",
-                                    height:"50px"
+
+                                    width: "70%",
+                                    height: "50px"
 
                                 }}
-                                >   <Link to={"/search"}>
-                                <Button sx={{ my: 0, color: 'black', display: 'block',mt:1 }}><AiOutlineSearch />Search</Button>
+                            >   <Link to={"/search"}>
+                                    <Button sx={{ my: 0, color: 'black', display: 'block', mt: 1 }}><AiOutlineSearch />Search</Button>
                                 </Link>
                                 <Button onClick={() => handleCloseNavMenu()} sx={{ my: 0, color: 'black', display: 'block' }}><SupportIcon />Help</Button>
-                               <Link to={"/offers"}> <Button
-                                    sx={{ my: 0,  color: 'black', display: 'block' }}
-                                    
+                                <Link to={"/offers"}> <Button
+                                    sx={{ my: 0, color: 'black', display: 'block', mt: 1 }}
+
                                 > <SellIcon />Offers</Button></Link>
 
                                 <Button
@@ -187,15 +185,11 @@ export const ResponsiveAppBar = () => {
                                     <ShoppingBagIcon /> Cart
                                 </Button>
                             </Box>
-
-
-
-
                         </Box>
 
                         <Box sx={{ flexGrow: 0 }}>
                             {/* <Link to={'/'}> */}
-                            <LoginDrawer/>
+                            <LoginDrawer />
                             {/* <Tooltip title="Login" >
                                 <IconButton onClick={() => navigate("/login")} sx={{ p: 0 }}>
                                     <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
