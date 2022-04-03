@@ -105,13 +105,10 @@ export const Landing = () => {
           <div className="big-box align-self-center">
             <div
               className="row mb-0 pb-0"
-              style={{ borderBottom: "3px solid whitesmoke" }}
+              style={{ borderBottom: "3px solid whitesmoke",padding:"0px 50px 0px 50px",justifyContent:"space-between" }}
             >
               <div className="col-md-8">
                 <h3 className="text-left">
-                  <button className="btn btn-sm" onClick={() => getData()}>
-                    <Equal src="../../../Icons/equal.svg" alt="restaurant" />
-                  </button>
                   {rest.length} restaurants
                 </h3>
               </div>
@@ -135,7 +132,7 @@ export const Landing = () => {
                 >
                   Rating
                 </button>
-                <button className="list-inline-item btn filter">
+                {/* <button className="list-inline-item btn filter">
                   Filters
                   <img
                     src="../../../Icons/filter.svg"
@@ -149,7 +146,7 @@ export const Landing = () => {
                       marginLeft: "8px",
                     }}
                   />
-                </button>
+                </button> */}
               </ul>
             </div>
           </div>
