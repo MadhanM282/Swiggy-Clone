@@ -1,6 +1,7 @@
 import React from "react";
 import { CartDisplayDiv } from "../../Styles/RestaurantPage";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   Row,
   Minus,
@@ -16,9 +17,9 @@ export default function CartDisplay() {
     return state.cart.cart;
   });
 
-  // const subtotal = (cart) => {
-  //   console.log("cart", cart);
-  // };
+  const sum = cart.reduce((ac, av) => {
+    return ac + av.price;
+  }, 0);
 
   return (
     <CartDisplayDiv>
@@ -41,10 +42,13 @@ export default function CartDisplay() {
 
       <CartTotal>
         <h5>Subtotal</h5>
-        {/* <h3>{total}</h3> */}
+        <h5>{`₹${sum}`}</h5>
       </CartTotal>
       <p>Extra charges may apply</p>
-      <Checkout>Checkout</Checkout>
+
+      <Link to={"/cart"}>
+        <Checkout>Checkout</Checkout>
+      </Link>
     </CartDisplayDiv>
   );
 }
