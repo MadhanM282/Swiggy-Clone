@@ -6,10 +6,6 @@ import {
   RESNM,
 } from "./cartAction";
 const initial = {
-
-  restaurentName: "Alpha", //{ Name: , image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_100,h_100,c_fill/xgus21ov1ncd3shvvvgc" },
-  restaurentImg:
-    "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_100,h_100,c_fill/xgus21ov1ncd3shvvvgc",
   login: false,
   address: false,
   payment: false,

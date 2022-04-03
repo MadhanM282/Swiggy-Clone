@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Promotions from "../navbarSlide/slide";
 import { useDispatch } from "react-redux";
 import { RestaurantAction } from "../../ReduxFiles/Restaurant/RestaurantAction";
-import { ResImg, Resname } from "../../ReduxFiles/cart/cartAction";
+
 const Wrapper = styled.div`
   color: #171a29;
   font-family: sans-serif;
@@ -170,8 +170,6 @@ export const Landing = () => {
                   key={item._id}
                   onClick={() => {
                     dispatch(RestaurantAction(item));
-                    dispatch(ResImg(item.image));
-                    dispatch(Resname(item.name));
                   }}
                 >
                   <HotelMenu data={item} key={item._id} />

@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
 import SignUp from './SignUp';
+import { useDispatch } from 'react-redux';
+import { LogStat } from '../../ReduxFiles/cart/cartAction';
 
 const Div = styled.div`
     font-family: sans-serif;
@@ -134,7 +136,7 @@ export default function LoginDrawer() {
 }
 
 function OtpDrawer() {
-    
+    const dispatch = useDispatch()
     const [otp, setOtp] = useState('');
     const classes = useStyles();
     const [state2, setState2] = React.useState({
@@ -152,49 +154,6 @@ function OtpDrawer() {
         setState2({ ...state2, [anchor]: open });
     };
 
-    // const handleVerify = () => {
-    //     // console.log(phoneNumber, otp);
-    //     // console.log(setState, state);
-    //     axios
-    //         .post(
-    //             `${process.env.REACT_APP_API_URL}/api/customer/login/verify`,
-    //             {
-    //                 phoneNumber: phoneNumber,
-    //                 otp: otp,
-    //             },
-    //         )
-    //         .then((res) => {
-    //             // console.log(res.data);
-    //             // alert('Login Successfull');
-    //             setState2({ ...state2, right: false });
-    //             setState({ ...state, right: false });
-    //             localStorage.setItem('customerData', JSON.stringify(res.data));
-    //             history.push('/temp');
-    //             // history.push('/');
-    //             history.push('/Restaurants');
-    //             // history.goBack();
-    //         })
-    //         .catch((err) => {
-    //             console.log(err.response.data);
-    //             alert(err.response.data);
-    //         });
-    // };
-
-    // const getOtp = () => {
-    //     axios
-    //         .post(`${process.env.REACT_APP_API_URL}/api/customer/login`, {
-    //             phoneNumber: phoneNumber,
-    //         })
-    //         .then((res) => {
-    //             // console.log(res);
-    //             // alert('OTP have been sent Customer Phone Number');
-    //             setState2({ ...state2, right: true });
-    //         })
-    //         .catch((err) => {
-    //             console.log(err.response.data);
-    //             alert(err.response.data);
-    //         });
-    // };
 
     const list = (anchor) => (
         <div
@@ -309,7 +268,7 @@ function OtpDrawer() {
                     width: '318px',
                     borderRadius: '2%',
                 }}
-                // onClick={getOtp}
+                onClick={()=>dispatch(LogStat())}
             >
                 <p
                     style={{
