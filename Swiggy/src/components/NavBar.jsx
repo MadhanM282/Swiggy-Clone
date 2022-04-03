@@ -22,7 +22,7 @@ import { BsFillCartPlusFill } from "react-icons/bs";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import SellIcon from '@mui/icons-material/Sell';
 import SupportIcon from '@mui/icons-material/Support';
-// import LoginDrawer from './Login/Login';
+import LoginDrawer from "./Login/Login";
 
 const pages = ['Location', 'Products', 'Cart'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -195,7 +195,7 @@ export const ResponsiveAppBar = () => {
 
                         <Box sx={{ flexGrow: 0 }}>
                             {/* <Link to={'/'}> */}
-                            {/* <LoginDrawer/> */}
+                            <LoginDrawer/>
                             <Tooltip title="Login" >
                                 <IconButton onClick={() => navigate("/login")} sx={{ p: 0 }}>
                                     <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />

@@ -1,12 +1,17 @@
-import {createStore,combineReducers} from'redux'
-import { StatReducer } from './cart/cartReducer'
-import { HomeReducer } from './Home/HomeReducer'
-import { CartReducer } from './List/cartReducer'
+import { createStore, combineReducers } from "redux";
+// import { CartReducer } from "./cart/cartReducer";
+import { StatReducer } from "./cart/cartReducer";
+import { HomeReducer } from "./Home/HomeReducer";
+import { RestaurantReducer } from "./Restaurant/RestaurantReducer";
 
 const Root = combineReducers({
-    Stat:StatReducer,
-    home:HomeReducer,
-    cart:CartReducer
-})
+  Stat: StatReducer,
+  // cart: CartReducer,
+  home: HomeReducer,
+  restaurant: RestaurantReducer,
+});
 
-export const STORE = createStore(Root,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+export const STORE = createStore(
+  Root,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);

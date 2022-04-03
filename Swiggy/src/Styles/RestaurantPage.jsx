@@ -1,28 +1,31 @@
 import styled from "styled-components";
 
 export const HeaderImage = styled.img`
-  margin: 30px 20px;
-  width: 300px;
-  height: 200px;
+  margin: 30px 50px;
+  margin-left: 100px;
+  width: 250px;
+  height: 150px;
 `;
 
 export const InfoDiv = styled.div`
-  padding: 10px 20px;
-  width: 600px;
+  padding-top: 10px;
+  width: 550px;
 `;
 export const ExtraInfoDiv = styled.div`
   display: flex;
   flex-direction: row;
+  margin-left: -40px;
+
   /* justify-content: space-evenly; */
 `;
 
 export const OfferHeaderDiv = styled.div`
-  padding: 30px 30px;
-  height: 100px;
+  height: 160px;
   width: 300px;
   border: 2px solid white;
-  margin-top: 50px;
+  /* margin-top: 20px; */
   padding: 30px 50px 50px 50px;
+  box-sizing: border-box;
 `;
 
 export const ItemTypeDiv = styled.ul`
@@ -55,6 +58,7 @@ export const ItemDisplayDiv = styled.div`
   padding: 20px 50px;
   border-bottom: 1px solid;
   margin-left: 50px;
+  /* overflow: scroll; */
 `;
 
 export const CartDisplayDiv = styled.div`
@@ -97,12 +101,12 @@ export const One = styled.button`
 export const AddBtn = styled.button`
   margin-top: -15px;
   width: 50px;
-  margin-left: 80px;
+  margin-left: 90px;
   color: green;
 `;
 
 export const ItemImg = styled.img`
-  width: 120px;
+  width: 180px;
   height: 100px;
   padding-left: 50px;
   /* margin-top: 20px; */
