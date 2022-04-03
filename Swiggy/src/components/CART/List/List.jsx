@@ -9,6 +9,7 @@ export const ListData = () => {
     const { cart } = useSelector((store) => store.cart)
     console.log('cart', cart);
     const {  restaurentName, restaurentImg } = useSelector((store) => store.Stat)
+    console.log('restaurentName', restaurentName);
     useEffect(() => {
         Totl=0
     },[])

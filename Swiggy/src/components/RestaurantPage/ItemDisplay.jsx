@@ -1,4 +1,6 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { CartAction } from "../../ReduxFiles/List/cartAction";
 import {
   ItemDisplayDiv,
   Row,
@@ -10,6 +12,7 @@ import {
 } from "../../Styles/RestaurantPage";
 
 export default function ItemDisplay(Props) {
+  const dispatch = useDispatch()
   return (
     <ItemDisplayDiv>
       {/* {Props.item.map((e) => {
@@ -23,7 +26,7 @@ export default function ItemDisplay(Props) {
         </div>
         <Column>
           <ItemImg src={Props.image} alt="image" />
-          <AddBtn onClick={Props.onClick}>Add</AddBtn>
+          <AddBtn onClick={()=>dispatch(CartAction(Props))}>Add</AddBtn>
           <CustomP>Customisable</CustomP>
         </Column>
       </ItemDesc>

@@ -1,6 +1,7 @@
 import { Box, Button, TextField } from "@mui/material"
 import { Log, P, PaymentImg, Span1 } from "../../../Styles/cart"
 import { alpha, styled } from '@mui/material/styles';
+import { useNavigate } from "react-router-dom";
 const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
         color: 'green',
@@ -21,6 +22,7 @@ const CssTextField = styled(TextField)({
     },
 });
 export const Pay = () => {
+    const navigate = useNavigate()
     return (
         <Box sx={{ bgcolor: "white", ml: "100px" }}>
 
@@ -56,7 +58,7 @@ export const Pay = () => {
                             <CssTextField sx={{ width: "90%", m: 1 }} label="Name on Card" id="custom-css-outlined-input" />
                         </Box>
                     </Box>
-                    <Button sx={[{bgcolor:"#60b246",color:"white",width:"90%",m:1},()=>({"&:hover":{bgcolor:"#60b246"}})]}>Pay₹{}</Button>
+                    <Button onClick={()=>{navigate("/success")}} sx={[{bgcolor:"#60b246",color:"white",width:"90%",m:1},()=>({"&:hover":{bgcolor:"#60b246"}})]}>Pay₹{}</Button>
                     <P>Card details will be saved securely, based of the industry standard</P>
                 </Box>
 

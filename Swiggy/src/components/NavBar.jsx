@@ -196,11 +196,11 @@ export const ResponsiveAppBar = () => {
                         <Box sx={{ flexGrow: 0 }}>
                             {/* <Link to={'/'}> */}
                             <LoginDrawer/>
-                            <Tooltip title="Login" >
+                            {/* <Tooltip title="Login" >
                                 <IconButton onClick={() => navigate("/login")} sx={{ p: 0 }}>
                                     <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                                 </IconButton>
-                            </Tooltip>
+                            </Tooltip> */}
                             {/* </Link> */}
                             {/* <Menu
                             sx={{ mt: '45px' }}

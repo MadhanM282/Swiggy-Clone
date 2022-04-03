@@ -1,12 +1,12 @@
 
 
 function Confirmation() {
-    
-  
+
+
     return (
-        <div>
-            <div className='container' style={{margin: 'auto'}}>
-                <div>
+        <div style={{ width: "fit-content", margin: "auto" }}>
+            <div className='container' style={{ margin: 'auto' }}>
+                <div style={{ textAlign: "center" }}>
                     <img
                         src='https://trioangleblog.s3-us-west-2.amazonaws.com/trioangle/images/swiggy-banner.svg'
                         alt='swiggy'
@@ -18,7 +18,7 @@ function Confirmation() {
                                 fontFamily: 'sans-serif',
                                 fontSize: '50px',
                                 margin: "auto",
-                                justifyContent:'center'
+                                justifyContent: 'center'
                             }}
                         >
                             ORDER CONFIRMED

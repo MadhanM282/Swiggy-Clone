@@ -115,7 +115,6 @@ export const Restaurent = () => {
                     name={item.name}
                     price={item.price}
                     image={item.img_url}
-                    onClick={() => dispatch(CartAction(item))}
                   />
                 </li>
               );
