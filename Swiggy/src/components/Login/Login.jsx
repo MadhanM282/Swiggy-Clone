@@ -210,7 +210,6 @@ function OtpDrawer() {
                 onClick={()=>{dispatch(LogStat())
                     toggleOTPDrawer(anchor, false)
                 }}
-
             >
               <i className="fas fa-arrow-left fa-lg"></i>
             </button>
