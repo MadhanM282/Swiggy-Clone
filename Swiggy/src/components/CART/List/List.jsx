@@ -37,7 +37,7 @@ export const ListData = () => {
                     <img src="https://img.icons8.com/ios-glyphs/14/chat.png" alt="" />
                     <InputBox type="text" placeholder="Any Suggestions?" />
                 </Box>
-                <Box>
+                <Box sx={{border:1}}>
                     <Box sx={{ display: "flex", alignItems: "center" }}>
                         <Checkbox {...label} color="success" onChange={() => { 
                             setChk(!chk);

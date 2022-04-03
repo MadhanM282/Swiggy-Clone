@@ -5,7 +5,7 @@ import './App.css'
 
 // import { Navbar } from './components/Navbar/Navbar';
 import { Cart } from './components/CART/cartPage'
-import { Home } from './components/landingPAge'
+// import { Home } from './components/landingPAge'
 // import { SignInSide } from './components/login'
 import { ResponsiveAppBar } from './components/NavBar'
 // import PrimarySearchAppBar from './components/search'
