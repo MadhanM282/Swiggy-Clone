@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
 import SignUp from './SignUp';
 
-const Div = styled.div`
-    font-family: sans-serif;
-`;
+// const Div = styled.div`
+//     font-family: sans-serif;
+// `;
 
 const useStyles = makeStyles({
     list: {
