@@ -100,9 +100,9 @@ const HotelMenu = ({ data}) => {
                             <div className='dropdown-divider'></div>
                             <Discount className='font-weight-normal'>
                                 <img
-                                    src='../../../Icons/discount.svg'
+                                    src='https://img.icons8.com/ios-filled/54/8a584b/discount--v1.png'
                                     alt='discountBadge'
-                                    width='15px'
+                                    width='25px'
                                     style={{
                                         marginRight: '10px',
                                         marginBottom: '5px',

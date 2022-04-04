@@ -1,7 +1,5 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import VegIcon from "../../../Icons/veg.png";
-import NonVegIcon from "../../../Icons/non-veg.png";
 import { CartAction } from "../../ReduxFiles/List/cartAction";
 import {
   ItemDisplayDiv,
@@ -26,9 +24,9 @@ export default function ItemDisplay(Props) {
         <div>
           <p>
             {Props.veg ? (
-              <IconImg src={VegIcon} />
+              <IconImg src="https://img.icons8.com/ios-glyphs/30/26e07f/non-vegetarian-food-symbol.png" />
             ) : (
-              <IconImg src={NonVegIcon} />
+              <IconImg src="https://img.icons8.com/ios-glyphs/30/ed1c24/non-vegetarian-food-symbol.png" />
             )}
           </p>
           <h6>{Props.name}</h6>

@@ -50,7 +50,7 @@ export const ListData = () => {
                     </Box>
                 </Box>
                 <Box sx={{ display: "flex", alignItems: "center", p: 2, mt: 2, justifyContent: "space-evenly", border: "1px dashed" }}>
-                    <img src="../../../Icons/discount.svg" width='25px' alt="" />
+                    <img src="https://img.icons8.com/ios-filled/25/8a584b/discount--v1.png" width='25px' alt="" />
                     <Typography>Apply Coupon</Typography>
                 </Box>
                 <Box>
