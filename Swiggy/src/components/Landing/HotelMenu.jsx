@@ -28,7 +28,7 @@ const Tag = styled.p`
 `;
 
 const Badge = styled.span`
-    fontsize: 14px;
+    font-size: 14px;
     padding: 5px;
     border-radius: 0px;
     background-color: ${(props) => {
