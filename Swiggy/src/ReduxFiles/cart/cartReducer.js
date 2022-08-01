@@ -16,6 +16,7 @@ export const StatReducer = (store = initial, { type, payload }) => {
       return { login: true, address: false, payment: false };
     case ADDRESS_STAT:
       return { address: true,  payment: false };
+
     case PAYMENT_STAT:
       return { payment: true };
     case RESIMG:

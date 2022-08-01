@@ -69,12 +69,11 @@ export const Restaurent = () => {
       }, []);
       setCategories(newCategories);
       setSelectedCategory(newCategories[0]);
-      // console.log(res.data);
     });
   }, []);
 
   const classes = useStyles();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   return (
     <div>
@@ -86,9 +85,17 @@ export const Restaurent = () => {
           cusines={restaurantData.cuisines.join(", ")}
           address={restaurantData.geometry}
           infoArray={[
-            { key: "Ratings", value: restaurantData.rating },
+            {
+              key: "Ratings",
+              icon: "https://img.icons8.com/ios/18/FFFFFF/star--v1.png",
+              value: restaurantData.rating,
+            },
             { key: "Delivery time", value: restaurantData.average_time },
-            { key: "Cost for two", value: restaurantData.average_cost },
+            {
+              key: "Cost for two",
+              icon: "https://img.icons8.com/material-outlined/20/FFFFFF/rupee.png",
+              value: restaurantData.average_cost,
+            },
           ]}
         />
         <OfferHeader />
@@ -111,10 +118,12 @@ export const Restaurent = () => {
               return (
                 <li key={item._id}>
                   <ItemDisplay
+                    _id={item._id}
                     veg={item.veg}
                     name={item.name}
                     price={item.price}
                     image={item.img_url}
+                    quantity={1}
                   />
                 </li>
               );

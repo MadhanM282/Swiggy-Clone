@@ -15,8 +15,6 @@ import { DummyP } from "./Payment/Dummy";
 export const Cart = () => {
     const { cart } = useSelector((store) => store.cart)
     const { login, address, payment } = useSelector((store) => store.Stat)
-    // const len = cart.length
-    console.log('cart', cart);
     return cart.length===0? <Empty/>: (
         <Main>
             <LogsDiv>

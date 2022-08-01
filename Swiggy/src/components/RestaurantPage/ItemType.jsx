@@ -7,6 +7,7 @@ export default function ItemType(Props) {
       {Props.item.map((item) => {
         return (
           <ItemTypeList
+            key={item._id}
             isActive={item === Props.selectedCategory}
             onClick={() => {
               Props.onClick(item);

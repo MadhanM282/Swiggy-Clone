@@ -1,5 +1,6 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
 import { CartAction } from "../../ReduxFiles/List/cartAction";
 import {
   ItemDisplayDiv,
@@ -14,7 +15,7 @@ import {
 
 export default function ItemDisplay(Props) {
   const dispatch = useDispatch();
-  console.log("ItemDisplay", Props);
+  const cart = useSelector((store) => store.cart.cart);
   return (
     <ItemDisplayDiv>
       {/* {Props.item.map((e) => {
@@ -34,7 +35,13 @@ export default function ItemDisplay(Props) {
         </div>
         <Column>
           <ItemImg src={Props.image} alt="image" />
-          <AddBtn onClick={() => dispatch(CartAction(Props))}>Add</AddBtn>
+          <AddBtn
+            onClick={() => {
+              dispatch(CartAction(Props));
+            }}
+          >
+            Add
+          </AddBtn>
           <CustomP>Customisable</CustomP>
         </Column>
       </ItemDesc>
