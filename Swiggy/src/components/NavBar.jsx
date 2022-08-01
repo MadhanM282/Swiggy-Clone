@@ -43,6 +43,7 @@ export const ResponsiveAppBar = () => {
     setAnchorElNav(null);
   };
 
+
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
@@ -226,6 +227,7 @@ export const ResponsiveAppBar = () => {
               {/* <Link to={'/'}> */}
               <LoginDrawer />
               {/* <Tooltip title="Login" >
+
                                 <IconButton onClick={() => navigate("/login")} sx={{ p: 0 }}>
                                     <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
                                 </IconButton>

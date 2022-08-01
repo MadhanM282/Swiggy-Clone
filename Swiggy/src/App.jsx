@@ -1,12 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-
-// import { Navbar } from './components/Navbar/Navbar';
-import { Cart } from "./components/CART/cartPage";
-// import { Home } from "./components/landingPAge";
-// import { SignInSide } from './components/login'
+import { Cart } from './components/CART/cartPage';
 import { ResponsiveAppBar } from "./components/NavBar";
-// import PrimarySearchAppBar from './components/search'
 import { Restaurent } from "./components/RestaurantPage/Restaurentpage";
 import { Landing } from "./components/Landing/Landing";
 import { Searchbar } from "./components/search/search";
