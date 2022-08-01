@@ -76,8 +76,7 @@ export const SignBttn = styled.div`
     padding:20px 30px 0px 30px;
     &:hover{
         background:#409925 ;
-    }
-    
+    }    
 `
 export const LogButtona = styled.div`
     display: flex;

@@ -306,7 +306,7 @@ function OtpDrawer() {
           width: "318px",
           borderRadius: "2%",
         }}
-        // onClick={getOtp}
+        onClick={()=>LogStat()}
       >
         <p
           style={{

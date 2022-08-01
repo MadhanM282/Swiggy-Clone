@@ -1,7 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import VegIcon from "../../../Icons/veg.png";
-import NonVegIcon from "../../../Icons/non-veg.png";
+import { useDispatch, useSelector } from "react-redux";
 import { CartAction } from "../../ReduxFiles/List/cartAction";
 import {
   ItemDisplayDiv,
@@ -16,7 +14,7 @@ import {
 
 export default function ItemDisplay(Props) {
   const dispatch = useDispatch();
-  console.log("ItemDisplay", Props);
+  const cart = useSelector((store) => store.cart.cart);
   return (
     <ItemDisplayDiv>
       {/* {Props.item.map((e) => {
@@ -26,9 +24,9 @@ export default function ItemDisplay(Props) {
         <div>
           <p>
             {Props.veg ? (
-              <IconImg src={VegIcon} />
+              <IconImg src="https://img.icons8.com/ios-glyphs/30/26e07f/non-vegetarian-food-symbol.png" />
             ) : (
-              <IconImg src={NonVegIcon} />
+              <IconImg src="https://img.icons8.com/ios-glyphs/30/ed1c24/non-vegetarian-food-symbol.png" />
             )}
           </p>
           <h6>{Props.name}</h6>
@@ -36,7 +34,13 @@ export default function ItemDisplay(Props) {
         </div>
         <Column>
           <ItemImg src={Props.image} alt="image" />
-          <AddBtn onClick={() => dispatch(CartAction(Props))}>Add</AddBtn>
+          <AddBtn
+            onClick={() => {
+              dispatch(CartAction(Props));
+            }}
+          >
+            Add
+          </AddBtn>
           <CustomP>Customisable</CustomP>
         </Column>
       </ItemDesc>

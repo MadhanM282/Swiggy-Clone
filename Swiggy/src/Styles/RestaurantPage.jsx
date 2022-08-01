@@ -21,11 +21,28 @@ export const ExtraInfoDiv = styled.div`
 
 export const OfferHeaderDiv = styled.div`
   height: 160px;
-  width: 300px;
-  border: 2px solid white;
-  /* margin-top: 20px; */
-  padding: 30px 50px 50px 50px;
+  width: 360px;
+  padding: 6px 50px 50px 50px;
   box-sizing: border-box;
+`;
+
+export const OfferHeading = styled.div`
+  z-index: 100;
+  background: #171a29;
+  width: fit-content;
+  position: relative;
+  padding: 5px 8px 2px 6px;
+`;
+
+export const OfferDiscription = styled.div`
+  border: 1px solid white;
+  margin: -26px 0px 0px 10px;
+  padding: 29px 20px 10px 26px;
+`;
+
+export const IconDiv = styled.div`
+  display: flex;
+  height: 20px;
 `;
 
 export const ItemTypeDiv = styled.ul`
@@ -102,7 +119,7 @@ export const Plus = styled.button`
   /* border: none; */
 `;
 
-export const One = styled.button`
+export const Quantity = styled.button`
   color: green;
   width: 30px;
   height: 30px;

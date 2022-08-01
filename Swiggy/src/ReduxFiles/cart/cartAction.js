@@ -15,6 +15,8 @@ export const PaymentStat = () => ({ type: PAYMENT_STAT });
 
 export const ResImg= (data)=>({type:RESIMG,payload:data})
 
+
+
 export const Resname= (data)=>({type:RESNM,payload:data})
 
 

@@ -15,8 +15,6 @@ import { DummyP } from "./Payment/Dummy";
 export const Cart = () => {
     const { cart } = useSelector((store) => store.cart)
     const { login, address, payment } = useSelector((store) => store.Stat)
-    // const len = cart.length
-    console.log('cart', cart);
     return cart.length===0? <Empty/>: (
         <Main>
             <LogsDiv>
@@ -24,7 +22,7 @@ export const Cart = () => {
                 {login? <Dummy/> :address?<SuccessAddress/>:<Address />}
                 {!address?<DummyP/>:<Pay/>}
             </LogsDiv>
-            <Box sx={{backgroundColor: 'white',height:"540px" ,border:1,width:"25%",mt:"30px"}}>
+            <Box sx={{backgroundColor: 'white',height:"540px" ,width:"25%",mt:"30px"}}>
                 <ListData/>
             </Box>
         </Main>

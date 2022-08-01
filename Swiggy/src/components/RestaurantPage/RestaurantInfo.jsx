@@ -1,5 +1,5 @@
 import React from "react";
-import { InfoDiv, ExtraInfoDiv } from "../../Styles/RestaurantPage";
+import { InfoDiv, ExtraInfoDiv, IconDiv } from "../../Styles/RestaurantPage";
 
 export default function RestaurantInfo(Props) {
   return (
@@ -10,11 +10,16 @@ export default function RestaurantInfo(Props) {
           <p>{Props.cusines}</p>
           <p>{Props.address}</p>
           <ExtraInfoDiv>
-            {Props.infoArray.map((item) => {
+            {Props.infoArray.map((item, index) => {
               return (
-                <ul>
+                <ul key={index}>
                   <li className="list_style_none">
-                    <h6>{item.value}</h6>
+                    <IconDiv>
+                      <img src={item.icon} />
+                      <h6>{item.value}</h6>
+                      {index === 1 ? <h6> mins</h6> : null}
+                    </IconDiv>
+
                     <p>{item.key}</p>
                   </li>
                 </ul>

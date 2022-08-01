@@ -58,7 +58,7 @@ export const Pay = () => {
                             <CssTextField sx={{ width: "90%", m: 1 }} label="Name on Card" id="custom-css-outlined-input" />
                         </Box>
                     </Box>
-                    <Button onClick={()=>{navigate("/success")}} sx={[{bgcolor:"#60b246",color:"white",width:"90%",m:1},()=>({"&:hover":{bgcolor:"#60b246"}})]}>Pay₹{}</Button>
+                    <Button onClick={()=>{navigate("/success")}} sx={[{bgcolor:"#60b246",p:2,color:"white",width:"90%",m:1},()=>({"&:hover":{bgcolor:"#60b246"}})]}>Pay{}</Button>
                     <P>Card details will be saved securely, based of the industry standard</P>
                 </Box>
 
