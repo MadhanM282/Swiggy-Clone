@@ -61,7 +61,6 @@ export const ListData = () => {
                 >
                   -
                 </Box>
-
                 <Box
                   sx={{ width: "25px", height: "25px", textAlign: "center" }}
                 >
@@ -71,23 +70,6 @@ export const ListData = () => {
                   sx={{ width: "25px", height: "25px", textAlign: "center" }}
                 >
                   +
-
-                <Box sx={{border:1}}>
-                    <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <Checkbox {...label} color="success" onChange={() => { 
-                            setChk(!chk);
-                        Totl=0
-                            }} />
-                        <Typography>Opt in for No-contact Delivery</Typography>
-                    </Box>
-                    <Box sx={{ ml: 3 }}>
-                        {!chk ? <P>Unwell, or avoiding contact? Please select no-contact delivery. Partner will safely place the order outside your door (not for COD)</P> : <P>Our delivery partner will call to confirm. Please ensure that your address has all the required details.</P>}
-                    </Box>
-                </Box>
-                <Box sx={{ display: "flex", alignItems: "center", p: 2, mt: 2, justifyContent: "space-evenly", border: "1px dashed" }}>
-                    <img src="https://img.icons8.com/ios-filled/25/8a584b/discount--v1.png" width='25px' alt="" />
-                    <Typography>Apply Coupon</Typography>
-
                 </Box>
               </Box>
 
